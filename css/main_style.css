@@ -8,7 +8,7 @@
  a:hover { color: #3b7cd1; text-decoration: none; }
  body { font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #626262; margin: 0; padding: 0; background: #021f2f; }
  div.paragraph { line-height: 1.5; padding: .5em 0; }
- p { line-height: 1.5; padding: .5em 0; }
+ p { line-height: 1.2; padding: .5em 0; }
  h1, h2, h3, h4 { font-family: Georgia, Helvetica, sans-serif; font-size: 22px; color: #272e34; padding: .5em 0 .2em 0; }
  h1 { font-size: 30px; line-height: 1; color: #fff; }
  h2, h3 { line-height: 1.3; color: #272e34; }
