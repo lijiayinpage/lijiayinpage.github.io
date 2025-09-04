@@ -1,305 +1,341 @@
-<?php
-header("Content-type:text/html;charset=utf8");
-?>
 <!DOCTYPE html>
-<!-- saved from url=(0030)http://yuanganzhao.weebly.com/ -->
-<html lang="en">
+<html lang="zh-CN">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JIAYIN LI - 个人主页</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 头部导航 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .name {
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            position: relative;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #000;
+        }
+        
+        nav ul li a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #000;
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        /* 个人资料区域 */
+        .profile {
+            display: flex;
+            margin-top: 30px;
+            gap: 30px;
+        }
+        
+        .contact-info {
+            width: 250px;
+        }
+        
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .contact-icon {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-icon i {
+            color: #333;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        
+        .contact-icon span {
+            font-size: 16px;
+            color: #555;
+        }
+        
+        /* 关于我部分 */
+        .about-me {
+            margin-top: 30px;
+        }
+        
+        .about-me h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .about-me p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        /* 研究兴趣部分 */
+        .research-interests {
+            margin-top: 40px;
+        }
+        
+        .research-interests h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        /* 新闻更新部分 */
+        .news-updates {
+            margin-top: 40px;
+        }
+        
+        .news-updates h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .news-item {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+        
+        .news-date {
+            width: 30px;
+            font-weight: 600;
+            color: #333;
+            margin-right: 15px;
+        }
+        
+        .news-content {
+            flex: 1;
+        }
+        
+        .news-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .news-description {
+            font-size: 15px;
+            color: #555;
+        }
+        
+        /* 页脚 */
+        footer {
+            margin-top: 60px;
+            padding: 30px 0;
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .footer-links {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        
+        .footer-copyright {
+            font-size: 14px;
+            color: #ccc;
+        }
 
-<title>Home Page - Home</title>
-<link rel="icon" href="./title.ico" mce_href="./title.ico" type="image/x-icon">
-<Meta name="Keywords" Content="Science, Research,个人主页,李家印,科研,科技">
-<Meta name="Description" Content="....">
-<Meta name="Robots" Content="All">
-<Meta name="Author" Content="李家印">
-<Meta name="Generator" Content="FrontPage">
-<META name="revisit-after" CONTENT="7 days">
-<link id="wsite-base-style" rel="stylesheet" type="text/css" href="./css/sites.css">
-<link rel="stylesheet" type="text/css" href="./css/fancybox.css">
-<link rel="stylesheet" type="text/css" href="./css/main_style.css" title="wsite-theme-css">
-<style type="text/css">
-.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {
-}
-#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {
-}
-.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label {
-}
-.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {
-}
-#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {
-}
-.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title {
-}
-#wsite-title {
-}
-.wsite-menu-default a {
-}
-.wsite-menu a {
-}
-.wsite-image div, .wsite-caption {
-}
-.galleryCaptionInnerText {
-}
-.fancybox-title {
-}
-.wslide-caption-text {
-}
-.wsite-phone {
-}
-.wsite-headline, .wsite-header-section .wsite-content-title {
-}
-.wsite-headline-paragraph, .wsite-header-section .paragraph {
-}
-.wsite-button-inner {
-}
-.wsite-not-footer blockquote {
-}
-.wsite-footer blockquote {
-}
-.blog-header h2 a {
-}
-#wsite-content h2.wsite-product-title {
-}
-.wsite-product .wsite-product-price a {
-}
-@media screen and (min-width: 767px) {
-.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {
-}
-#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {
-}
-.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label {
-}
-.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {
-}
-#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {
-}
-.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title {
-}
-#wsite-title {
-}
-.wsite-menu-default a {
-}
-.wsite-menu a {
-}
-.wsite-image div, .wsite-caption {
-}
-.galleryCaptionInnerText {
-}
-.fancybox-title {
-}
-.wslide-caption-text {
-}
-.wsite-phone {
-}
-.wsite-headline, .wsite-header-section .wsite-content-title {
-}
-.wsite-headline-paragraph, .wsite-header-section .paragraph {
-}
-.wsite-button-inner {
-}
-.wsite-not-footer blockquote {
-}
-.wsite-footer blockquote {
-}
-.blog-header h2 a {
-}
-#wsite-content h2.wsite-product-title {
-}
-.wsite-product .wsite-product-price a {
-}
-}
-</style>
-<style type="text/css">
-.customer-accounts-app__body[data-v-364d7bb4]{width:100%}.customer-accounts-app__modal-wrapper[data-v-364d7bb4]{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:17;display:flex;flex-direction:column;justify-content:center;align-items:center;background:rgba(0,0,0,.25)}.customer-accounts-app__modal[data-v-364d7bb4]{width:580px;box-sizing:border-box;max-height:100%;min-height:415px;overflow-y:auto;z-index:18;padding:24px;background:#fff;display:flex}.wsite-theme-dark .customer-accounts-app__modal-wrapper[data-v-364d7bb4]{background:hsla(0,0%,100%,.25)}.wsite-theme-dark .customer-accounts-app__modal[data-v-364d7bb4]{background:#000}@media (max-width:750px){.customer-accounts-app__modal[data-v-364d7bb4]{width:100%;height:100%}}
-</style>
-<style type="text/css">
-.loading[data-v-09548d63]{display:flex;width:100%;align-items:center;justify-content:center;margin:15px 0}
-</style>
-<style type="text/css">
-.page-header__wrapper[data-v-04176401]{display:flex;flex-direction:row;align-items:center;justify-content:space-between}.page-header__text[data-v-04176401]{margin:0 32px 0 0}.page-header__divider[data-v-04176401]{height:1px;width:100%;margin:24px 0;background:rgba(0,0,0,.1)}
-</style>
-<style type="text/css">
-.form-field[data-v-64b6436e]{margin:16px 0}.form-field__label[data-v-64b6436e]{display:flex;flex-direction:column}.form-field__title[data-v-64b6436e]{margin-bottom:8px;font-size:90%;color:#3b526d}.wsite-theme-dark .form-field__title[data-v-64b6436e]{color:#dfe6ee}.form-field__error[data-v-64b6436e]{margin-top:14px}
-</style>
-<style type="text/css">
-.field-error[data-v-60fd9ad5]{color:#ff2825}
-</style>
-<style type="text/css">
-.form-instructions[data-v-1b20c747]{margin-bottom:24px}
-</style>
-<style type="text/css">
-.site-input[data-v-7c9d3469]{border:1px solid #dbdbdb;padding:8px;border-radius:2px}.site-input__is-invalid[data-v-7c9d3469]{border:1px solid #ff2825}
-</style>
-<style type="text/css">
-.actions-row[data-v-e3a0cd02]{margin-top:24px;display:flex;flex-direction:row;justify-content:space-between;align-items:center}.actions-row div[data-v-e3a0cd02]:first-child{margin-right:16px}
-</style>
-<style type="text/css">
-.back-button[data-v-089f4bca]{display:flex;flex-direction:row;align-items:center}.back-button__icon[data-v-089f4bca]{margin:0 8px 0 0}
-</style>
-<style type="text/css">
-p[data-v-5e8be7b5]{font-weight:700}.order-confirmation__checkbox[data-v-5e8be7b5]{margin-right:6px}.order-confirmation__success-message[data-v-5e8be7b5]{display:flex;flex-direction:row;align-items:center}
-</style>
-<style type="text/css">
-.register__privacy-policy[data-v-00b778c0]{margin:24px 0;font-size:small}
-</style>
-<style type="text/css">
-.customer-accounts-app__body[data-v-a6d2e276]{width:100%}.customer-accounts-app__modal-wrapper[data-v-a6d2e276]{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:17;display:flex;flex-direction:column;justify-content:center;align-items:center;background:rgba(0,0,0,.25)}.customer-accounts-app__modal[data-v-a6d2e276]{width:580px;box-sizing:border-box;max-height:100%;min-height:415px;overflow-y:auto;z-index:18;padding:24px;background:#fff;display:flex}.wsite-theme-dark .customer-accounts-app__modal-wrapper[data-v-a6d2e276]{background:hsla(0,0%,100%,.25)}.wsite-theme-dark .customer-accounts-app__modal[data-v-a6d2e276]{background:#000}@media (max-width:600px){.customer-accounts-app__modal[data-v-a6d2e276]{width:100%;height:100%}}
-</style>
-<style type="text/css">
-.account-details__wrapper[data-v-4c887ac0]{width:100%}.account-details__group[data-v-4c887ac0]{margin-bottom:24px;text-align:left}.account-details__table-container[data-v-4c887ac0]{overflow:auto}.account-details__title[data-v-4c887ac0]{text-align:left;margin-bottom:6px}.account-details__log-out[data-v-4c887ac0]{cursor:pointer}.account-details__error[data-v-4c887ac0]{margin:36px 0;text-align:left}.error[data-v-4c887ac0]{color:#ff2825}
-</style>
-<style type="text/css">
-.section-header__wrapper[data-v-1e785cc9]{display:flex;flex-direction:row;align-items:center;justify-content:space-between}.section-header__text[data-v-1e785cc9]{margin:24px 0}
-</style>
-<style type="text/css">
-.empty-content-area__container[data-v-8fbca36e]{display:flex;flex-direction:row;align-items:center;justify-content:center;margin-bottom:32px;width:100%;min-height:80px;background:#f2f2f2}.wsite-theme-dark .empty-content-area__container[data-v-8fbca36e]{background:#000}
-</style>
-<style type="text/css">
-.order-details__table[data-v-244ed988]{width:100%;margin-top:12px;margin-bottom:36px;empty-cells:show;border-collapse:collapse;border-spacing:0;border:none}.order-details__table th[data-v-244ed988]{margin:0;padding:16px;text-align:left;background:#f2f2f2}.wsite-theme-dark .order-details__table th[data-v-244ed988]{background:#000}.order-details__table td[data-v-244ed988]{margin:0;padding:16px;text-align:left}
-</style>
-<style type="text/css">
-.shipping-address__wrapper[data-v-4fc55e12]{text-align:left;width:100%}
-</style>
-<style type="text/css">
-.reset-password__link[data-v-72d92d0c]{cursor:pointer}
-</style>
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+            }
+            
+            nav ul li {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            
+            .profile {
+                flex-direction: column;
+            }
+            
+            .contact-info {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            
+            .news-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .news-date {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
 </head>
-<body class=" tall-header-page wsite-background wsite-theme-light  wsite-page-index">
-<div id="container">
-<table id="header">
-  <tbody>
-    <tr>
-      <td id="logo"><span class="wsite-logo"><span id="wsite-title"><font size="5"><b>Jiayin Li's Homepage</b></span> </a> </span></td>
-      <td id="header-right"><table>
-          <tbody>
-            <tr>
-              <td class="phone-number"></td>
-              <td class="social"></td>
-              <td class="search"></td>
-            </tr>
-          </tbody>
-        </table></td>
-    </tr>
-  </tbody>
-</table>
-<div id="main">
-<div id="banner">
-<div class="wsite-header"><img src="./pic/fj.jpg" width="100%" height="95%"></div>
-  </div>
-  <div id="content">
-    <div id="wsite-content" class="wsite-elements wsite-not-footer">
-      <div>
-        <div class="wsite-multicol">
-          <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-          <div class="wsite-multicol-table-wrap" style="margin-bottom:-5px;margin-top:-5px;">
-            <table class="wsite-multicol-table">
-              <tbody class="wsite-multicol-tbody">
-                <tr class="wsite-multicol-tr">
-                  <td class="wsite-multicol-col" style="width:73.875802997859%; padding:0 20px;"><div class="paragraph" style="text-align:left;">
-                    <p style="margin-top:-30px"><font size="6" face="Times New Roman" color="black"><b>Jiayin Li</b></font></p>
-                    <p style="line-height:100%"><font size="3" face="Times New Roman" color="black"><b>Laboratory:</b> Fujian Provincial Key Lab of Network Security & Cryptology</font></p>
-                    <p style="line-height:100%"><font size="3" face="Times New Roman" color="black"><b>Address:</b> College of Computer and Cyber Security, Fujian Normal University, Fujian, China, 350117</font></p>
-                    <p style="line-height:100%"><font size="3" face="Times New Roman" color="black"><b>Research:</b> Federated Learning,  Artificial Intelligence Security, Privacy-Preserving Deep Learning</font></p>
-                    <p style="line-height:100%"><font size="3" face="Times New Roman" color="black"><b>Email:</b> lijiayin@petalmail.com</font></p>
+<body>
+    <div class="container">
+        <header>
+            <div class="name">JIAYIN LI</div>
+            <nav>
+                <ul>
+                    <li><a href="#about">ABOUT ME</a></li>
+					<li><a href="#about">RESEARCH INTERESTS</a></li>
+                    <li><a href="#publications">PAPERS PUBLICATION</a></li>
+                    <li><a href="#projects">PATENTS</a></li>
+                    <li><a href="#awards">PROJECTS</a></li>
+                    <li><a href="#hobbies">AWARDS</a></li>
+                </ul>
+            </nav>
+        </header>
 
-                  </div></td>
-                  <td class="wsite-multicol-col" style="width:20.124197002141%; padding:0 20px;"><div>
-                      <div class="wsite-image wsite-image-border-medium " style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:-40px;text-align:center"> <a rel="lightbox" onclick="if (!lightboxLoaded) return false"> <img src="./pic/ljy.jpg" alt="图片" style="width:auto;max-width:48%"> </a>
-                        <div style="display:block;font-size:70%"></div>
-                      </div>
-                    </div></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        <div class="profile">
+            <div class="contact-info">
+				<div class="education-block">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span><b>Degree:</b> Ph.D., Post-Doctor</span>
+                </div>
+				<div class="education-block">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span><b>Qualification:</b> Master Tutor</span>
+                </div>
+				<div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                    <span><b>Email:</b> lijiayin2019@gmail.com</span>
+				</div>
+            </div>
+            <div class="profile-pic-container">
+                <img src="./pic/ljy.jpg" alt="JIAYIN LI" class="profile-pic">
+            </div>
         </div>
-      </div>
-      <div>
-        <div style="height: 10px; overflow: hidden; width: 100%;"></div>
-        <hr class="styled-hr" style="width:100%;">
-        <div style="height: 10px; overflow: hidden; width: 100%;"></div>
-      </div>
-      <div class="paragraph"><font size="3" face="Georgia" color="black"><b><U>Papers Publication</U></b></font></div>
-      <?php	$ind=1;?>
-	<!--下面输入论文信息-->
-	<div class="paragraph" style="text-align:justify">
-	<p><font size="3" face="KaiTi" color="black">
-	[1].徐瑞阳,徐振宇,<b>李家印*</b>等.基于节点交互度的社会网络链路预测[J].<i>计算机系统应用</i>,2024.</font></p>
 		
-	<div class="paragraph" style="text-align:justify">    
-	<p><font size="3" face="Times New Roman" color="black">
-	[2].<b>J. Li</b>, W. Guo, L. Xie, X. Liu and J. Cai. Privacy-Preserving Object Detection With Poisoning Recognition for Autonomous Vehicles[J] <i>IEEE Transactions on Network Science and Engineering</i>, 2023.</font></p>
 		
-	<div class="paragraph" style="text-align:justify">
-	<p><font size="3" face="Times New Roman" color="black">
-	[3].<b>J. Li</b>, w. Guo, x. Han, et al. Federated Learning Based on Defending Against Data Poisoning Attacks in IoT[J]. <i>arXiv preprint arXiv:2209.06397</i>, 2022.</font></p>
+        <section id="about" class="about-me">
+            <h2>About Me</h2>
+            <p>My name is Jiayin Li. I am currently a full-time faculty member at the College of Computer Science and Cyber Security at Fujian Normal University and the Fujian Provincial Key Lab of Network Security & Cryptology. Here is my Resume.</p>
+		</section>
+        <section id="research" class="research-interests">
+            <h2>Research Interests</h2>
+            <p><li>AI Security</li></p>
+			<p><li>Data Security</li></p>
+			<p><li>Distributed Federated Learning Security</li></p>
+			
+        <section id="papers" class="news-updates">
+            <h2>Papers Publication</h2>
+            <div class="news-item">
+                <div class="news-content">
+				<p><li><b> J. Li</b>, S. Xu, X. Han, et al. Verifiable and Lightweight Multi-Round Secure Federated Learning[J]. <i>IEEE Transactions on Dependable and Secure Computing (TDSC)</i>, DOI: 10.1109/TDSC.2025.3606413. 2025. <b>(CCF A, 中科院2区ToP)</b></li></p>
+				<p><li>X Lan, <b> J. Li*</b>, Z. Ying, et al. FusionMIA: Enhancing Membership Inference Attacks with Spy Clients and Shadow Models in Federated Learning[C]. <i>International Conference on Knowledge Science, Engineering and Management (KSEM)</i>, 2025. <b>(CCF C)</b></li></p>
+				<p><li>Y. Zhong, R. Lin<b> J. Li</b>, et al. Bridging and Compressing Feature and Semantic Spaces for Robust Graph Neural Networks: An Information Theory Perspective[C]. <i>ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)</i>, 2024. <b>(CCF A)</b></li></p>
+				<p><li>徐瑞阳, 徐振宇, <b>李家印*</b>等. 基于节点交互度的社会网络链路预测[J]. <i>计算机系统应用</i>, 2024. <b>(CCF C)</b></li></p>
+				<p><li><b> J. Li</b>, W. Guo, L. Xie, et al. Privacy-Preserving Object Detection With Poisoning Recognition for Autonomous Vehicles[J]. <i>IEEE Transactions on Network Science and Engineering (TNSE)</i>, 10(3), 2023. <b>(中科院2区, JCR Q1)</b></li></p>
+				<p><li> W. Guo, <b>J. Li*</b>, X. Liu, et al. Privacy-Preserving Compressive Sensing for Real-Time Traffic Monitoring in Urban City[J]. <i>IEEE Transactions on Vehicular Technology (TVT)</i>, 69(12), 2020. <b>(中科院2区, JCR Q1)</b></li></p>
+				<p><li><b>李家印</b>, 郭文忠, 李小燕等. 基于智能交通的隐私保护道路状态实时监测方案[J]. <i>通信学报</i>, 41(7), 2020. <b>(CCF B, EI)</b></li></p>
+				<p><li><b>J. Li</b>, W. Guo, Z. Ma, et al. Privacy-Preserving Compressive Sensing for Traffic Estimation[C]. <i>IEEE Global Communications Conference (GlobeCom)</i>, 2019. <b>(CCF C)</b></li></p>
+				<p><li><b>J. Li</b>, H. Zheng, X. Feng, Z. Chen. Traffic Estimation in Road Networks via Compressive Sensing. [C] <i>IEEE International Conference on Wireless Communications and Signal Processing (WCSP)</i>, 2017. <b>(EI)</b></li></p>
+                </div>
+            </div>
+		
+		<section id="license" class="news-patents">
+            <h2>Patents</h2>
+            <div class="news-item">
+                <div class="news-content">
+                    <p><li>基于深度卷积神经网络的云中保护外包数据隐私保护系统. 专利号: ZL201910653448.6, 授权时间: 2023.05.30.</li></p>
+					<p><li>基于城市交通的隐私保护压缩感知实时交通监测方法. 专利号：ZL202010649250.3, 授权时间: 2021.08.31.</li></p>
+					<p><li>一种实用性云端隐私保护外包计算系统及其计算方法. 专利号：ZL201910723361.1, 授权时间: 2020.10.09.</li></p>
+					<p><li>一种基于车辆数据隐私保护与压缩感知的交通估计方法. 专利号：ZL201811551841.6, 授权时间: 2021.03.02.</li></p>
+				</div>
+			</div>
+			
+		<section id="projects" class="news-projects">
+			<h2>Projects</h2>
+            <div class="news-item">
+                <div class="news-content">
+                    <p><li>交通网络数据的层次化隐私保护研究<福建省青年创新基金项目>, 2023-2026, 主持</li></p>
+					<p><li>面向自动驾驶汽车具有中毒防御机制隐私保护方法<福州大学开放课题项目>, 2022-2023, 主持</li></p>
+                </div>
+            </div>
+    </div>
 	
-	<div class="paragraph" style="text-align:justify">
-	<p><font size="3" face="Times New Roman" color="black">
-	[4].W. Guo, <b>J. Li*</b>, X. Liu, Y. Y. Privacy-Preserving Compressive Sensing for Real-Time Traffic Monitoring in Urban City[J]. <i>IEEE Transactions on Vehicular Technology</i>, 2020.</font></p>
-	
-	<div class="paragraph" style="text-align:justify">
-	<p><font size="3" face="KaiTi" color="black">
-	[5].<b>李家印</b>,郭文忠,李小燕等. 基于智能交通的隐私保护道路状态实时监测方案[J].<i>通信学报</i>,2020.</font></p>
-	
-	<div class="paragraph" style="text-align:justify;">
-	<p><font size="3" face="Times New Roman" color="black">
-	[6].<b>J. Li</b>, W. Guo, Z. Ma, et al. Privacy-Preserving Compressive Sensing for Traffic Estimation[C]. <i>IEEE Global Communications Conference</i>, 2019.</font></p>
-	
-	<div class="paragraph" style="text-align:justify;">
-	<p><font size="3" face="Times New Roman" color="black">
-	[7].<b>J. Li</b>, H. Zheng, X. Feng, Z. Chen. Traffic Estimation in Road Networks via Compressive Sensing [C]. <i>IEEE International Conference on Wireless Communications and Signal Processing</i>, 2017.</font></p>
-      	
-	<div class="paragraph" style="text-align:justify;">
-      	<p><font size="3" face="Times New Roman" color="black">
-	[8].L. Ren, X Ning*, <b>J. Li</b>, Hierarchical Reinforcement-learning for Real-Time Scheduling of Agile Satellites[J]. <i>IEEE Access</i>, 2020.</font</p>
-	
-	<div class="paragraph" style="text-align:justify;">
-      	<p><font size="3" face="Times New Roman" color="black">
-	[9].H. Zheng, <b>J. Li</b>, X. Feng, et al. Spatial-Temporal Data Collection with Compressive Sensing in Mobile Sensor Networks[J]. <i>MDPI Sensors</i>, 2017.</font></p>
-	
-	<!--下面输入专利信息-->
-	<div class="paragraph"><font size="4" face="Times New Roman" color="black"><b><U>Licensed Patents</U></b></font></div>
-	<?php	$ind=1;?>
-      	<div class="paragraph" style="text-align:left;">
-      	<p><font size="3" face="KaiTi" color="black">
-	[1].基于深度卷积神经网络的云中保护外包数据隐私保护系统. 专利号：ZL201910653448.6，授权时间：2023.05.30</font></p>
-      	
-	<p><font size="3" face="KaiTi" color="black">
-	[2].基于城市交通的隐私保护压缩感知实时交通监测方法. 专利号：ZL202010649250.3，授权时间：2021.08.31</font></p>      
-      	
-	<p><font size="3" face="KaiTi" color="black">
-	[3].一种实用性云端隐私保护外包计算系统及其计算方法. 专利号：ZL201910723361.1，授权时间：2020.10.09</font></p>
-      	
-	<p><font size="3" face="KaiTi" color="black">
-	[4].一种基于车辆数据隐私保护与压缩感知的交通估计方法. 专利号：ZL201811551841.6，授权时间：2021.03.02</font></p>
-      	
-	<p><font size="3" face="KaiTi" color="black">
-	[5].移动无线传感器网络中基于核函数的压缩数据收集方法. 专利号：ZL201610503784.9，授权时间：2019.06.07</font></p>
-	
-	<!--下面输入项目信息-->
-      	<div class="paragraph"><font size="4" face="Times New Roman" color="black"><b><U>Projects Involved</U></b></font></div>
-	<?php	$ind=1;?>
-      	<div class="paragraph" style="text-align:justify; text-justify:inter-ideograph;">
-      	<p><font size="3" face="KaiTi", color="black">
-	[1].交通网络数据的层次化隐私保护研究 (福建省青年创新基金项目) 2023-2026, 主持</font></p>
-	
-	<div class="paragraph" style="text-align:justify; text-justify:inter-ideograph;">
-      	<p><font size="3" face="KaiTi", color="black">
-	[2].面向自动驾驶汽车具有中毒防御机制隐私保护方法 (福州大学开放课题项目) 2022-2023, 主持</font></p>
-	
-	<div class="paragraph" style="text-align:justify; text-justify:inter-ideograph;">
-      	<p><font size="3" face="KaiTi", color="black">
-	[3].面向大数据安全的密态数据处理关键技术研究 (国家自然科学基金面上项目), 2021-2024, 参与</font></p>
-      	<!--[<a href="下载地址" target="_blank">Download</a>]
-      	<span class="paragraph" style="text-align:left;">[<a href="地址" target="_blank">Certificate</a>]</span>
-      	<span class="paragraph" style="text-align:left;">[<a href="地址" target="_blank">Document</a>]</span></div>-->
-</div>
-<div class="clear"></div>
-</div>
-</div>
-<div id="footer">
-</div>
+	<\section>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">jarin</a>
+                <a href="#">jarinli</a>
+            </div>
+            <div class="footer-copyright">
+                © 2025 Jiayin Li. Published with GitHub Pages, powered by Jekyll, based on the Minimal Mistakes theme. Source code for this website can be found here.
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
