@@ -1,391 +1,4173 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JIAYIN LI - 个人主页</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <meta
+      name="description"
+      content="Jiayin Li — Faculty member at Fujian Normal University. Research in AI security, data security, and distributed deep learning security."
+    />
+    <title>李家印（Jiayin Li）| 个人主页</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      :root {
+        color-scheme: light;
+        --ink: #26292c;
+        --muted: #72777d;
+        --accent: #5084a2;
+        --line: #eceef0;
+        --page: #f3f4f5;
+        --radius: 25px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 24px;
+      }
+      body {
+        margin: 0;
+        background: var(--page);
+        color: var(--ink);
+        font-family: Arial, "Microsoft YaHei", "PingFang SC", sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      a:hover {
+        color: #285c7b;
+      }
+      a:focus-visible {
+        outline: 3px solid #78abc8;
+        outline-offset: 4px;
+      }
+      main {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 24px 20px 0;
+      }
+      .card {
+        background: #fff;
+        border: 1px solid rgba(30, 45, 60, 0.025);
+        border-radius: var(--radius);
+        box-shadow: 0 10px 30px rgba(30, 45, 60, 0.035);
+        margin-bottom: 20px;
+        padding: 32px 38px;
+      }
+      .profile-card {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 132px;
+        column-gap: 48px;
+        align-items: center;
+        padding-top: 30px;
+        padding-bottom: 32px;
+      }
+      h1 {
+        font-size: 40px;
+        line-height: 1.25;
+        letter-spacing: -1.2px;
+        margin: 0 0 10px;
+        font-weight: 750;
+      }
+      h1 span {
+        white-space: nowrap;
+      }
+      .affiliation {
+        color: #666b70;
+        font-size: 17px;
+        margin: 0 0 12px;
+        line-height: 1.5;
+      }
+      .affiliation span {
+        display: block;
+      }
+      .bio {
+        margin: 0 0 10px;
+        line-height: 1.6;
+      }
+      .qualifications {
+        margin: 0 0 18px;
+        font-size: 14px;
+        color: var(--muted);
+      }
+      .qualifications strong {
+        font-weight: 600;
+        color: #595f65;
+      }
+      .profile-photo {
+        position: relative;
+        width: 132px;
+        height: 182px;
+        border-radius: 23px;
+        overflow: hidden;
+        box-shadow: 0 12px 25px rgba(50, 72, 89, 0.1);
+        background: #e7eff5;
+        align-self: center;
+      }
+      .profile-photo img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+      .portrait-fallback {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: linear-gradient(145deg, #e9f1f6, #cfdfeb);
+        color: #7593a7;
+      }
+      .portrait-fallback svg {
+        width: 87px;
+        height: 98px;
+      }
+      .portrait-fallback span {
+        font-size: 12px;
+        letter-spacing: 2.5px;
+        margin-top: 7px;
+      }
+      .links {
+        display: flex;
+        gap: 9px;
+        flex-wrap: wrap;
+      }
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #e4eaf0;
+        border-radius: 999px;
+        padding: 4px 13px;
+        color: var(--accent);
+        font-size: 14px;
+        background: #f9fcfe;
+        box-shadow: 0 1px 3px rgba(30, 45, 60, 0.035);
+        transition:
+          background 0.18s,
+          border-color 0.18s;
+      }
+      .pill:hover {
+        background: #edf5fa;
+        border-color: #bfdae9;
+      }
+      h2 {
+        margin: 0 0 20px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid var(--line);
+        font-size: 25px;
+        line-height: 1.4;
+        letter-spacing: -0.55px;
+        font-weight: 700;
+      }
+      .publications-card {
+        padding-bottom: 20px;
+      }
+      .publication {
+        display: grid;
+        grid-template-columns: 250px minmax(0, 1fr);
+        gap: 23px;
+        align-items: center;
+        padding: 22px 0;
+        border-bottom: 1px solid #f0f1f2;
+      }
+      .publication:first-of-type {
+        padding-top: 10px;
+      }
+      .publication:last-child {
+        border-bottom: 0;
+        padding-bottom: 8px;
+      }
+      .publication-visual {
+        height: 150px;
+        border: 1px solid #e9edf0;
+        box-shadow: 0 3px 12px rgba(35, 49, 61, 0.04);
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: linear-gradient(135deg, #fdfefe, #f7fafc);
+      }
+      .publication-visual svg {
+        width: 195px;
+        height: 115px;
+      }
+      .publication-visual > span {
+        font-size: 11px;
+        letter-spacing: 1.1px;
+        color: #8697a3;
+        margin-top: -1px;
+      }
+      .figure-dot {
+        padding: 0 5px;
+        color: #b5c3cc;
+      }
+      .publication-body {
+        min-width: 0;
+      }
+      h3 {
+        margin: 0 0 5px;
+        font-size: 17px;
+        line-height: 1.42;
+        font-weight: 700;
+        letter-spacing: -0.15px;
+      }
+      .authors {
+        font-size: 14px;
+        color: #87898c;
+        margin: 0 0 6px;
+      }
+      .authors b {
+        color: #42474b;
+        font-weight: 700;
+      }
+      .citation {
+        font-size: 14px;
+        color: #85898d;
+        margin: 0 0 10px;
+        line-height: 1.55;
+      }
+      .citation i {
+        font-style: normal;
+      }
+      .citation b {
+        font-size: 12px;
+        font-weight: 500;
+        color: #6d8595;
+        display: block;
+        margin-top: 4px;
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+      }
+      .tags span {
+        font-size: 12px;
+        line-height: 1.4;
+        color: #777d83;
+        background: #f3f4f5;
+        border-radius: 999px;
+        padding: 4px 11px;
+      }
+      .research-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .research-tags li {
+        border: 1px solid #e6edf2;
+        border-radius: 999px;
+        background: #f8fbfd;
+        padding: 7px 16px;
+        font-size: 15px;
+        color: #527b94;
+      }
+      .numbered-list {
+        list-style: none;
+        counter-reset: entries;
+        margin: 0;
+        padding: 0;
+      }
+      .numbered-list li {
+        position: relative;
+        counter-increment: entries;
+        padding: 12px 0 12px 35px;
+        line-height: 1.7;
+        color: #60676d;
+        border-bottom: 1px solid #f1f2f3;
+        font-size: 17px;
+        overflow-wrap: anywhere;
+      }
+      .numbered-list li:first-child {
+        padding-top: 0;
+      }
+      .numbered-list li:last-child {
+        border: 0;
+        padding-bottom: 0;
+      }
+      .numbered-list li::before {
+        content: "[" counter(entries) "]";
+        position: absolute;
+        left: 0;
+        color: #8b9ba7;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 1.96;
+      }
+      footer {
+        max-width: 1000px;
+        margin: 26px auto 30px;
+        padding: 0 24px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 1.8;
+        color: #969ca2;
+      }
+      footer a {
+        color: #718b9e;
+      }
+      b,
+      strong {
+        font-weight: 600;
+      }
+      .contact-email {
+        margin: -6px 0 17px;
+        font-size: 14px;
+        color: #595f65;
+      }
+      .contact-email a {
+        overflow-wrap: anywhere;
+      }
+      .contact-email a:hover {
+        text-decoration: underline;
+      }
+      .paper-links {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 10px 0;
+      }
+      .paper-links .pill {
+        font-size: 12px;
+        padding: 4px 12px;
+        gap: 6px;
+      }
+      .paper-links .paper-pdf {
+        background: #f1f7fb;
+        border-color: #dceaf3;
+      }
+      .publisher-name {
+        font-size: 11px;
+        color: #89939b;
+      }
+      .download-note {
+        margin: 0 0 8px;
+        color: #899097;
+        font-size: 12px;
+        line-height: 1.6;
+      }
+      /* A4-width reading layout; narrow screens retain their responsive layout. */
+      main {
+        width: 100%;
+        max-width: 210mm;
+        padding: 20px 16px 0;
+      }
+      .card {
+        padding: 26px;
+      }
+      .profile-card {
+        grid-template-columns: minmax(0, 1fr) 110px;
+        column-gap: 24px;
+      }
+      .profile-copy {
+        min-width: 0;
+      }
+      h1 {
+        font-size: 32px;
+      }
+      .profile-photo {
+        width: 110px;
+        height: 151px;
+      }
+      .publication {
+        grid-template-columns: 180px minmax(0, 1fr);
+        gap: 20px;
+      }
+      .publication-visual svg {
+        max-width: 100%;
+      }
+      h2,
+      h3,
+      p,
+      li,
+      a,
+      .tags span,
+      .publisher-name {
+        overflow-wrap: anywhere;
+        word-break: normal;
+      }
+      footer {
+        max-width: 210mm;
+      }
+      @page {
+        size: A4 portrait;
+        margin: 12mm;
+      }
+      @media (max-width: 800px) {
+        main {
+          padding: 16px;
         }
-
+        .card {
+          padding: 26px;
+          border-radius: 21px;
+        }
+        .profile-card {
+          grid-template-columns: minmax(0, 1fr) 110px;
+          gap: 25px;
+        }
+        h1 {
+          font-size: 32px;
+        }
+        .profile-photo {
+          width: 110px;
+          height: 151px;
+        }
+        .publication {
+          grid-template-columns: 190px minmax(0, 1fr);
+          gap: 20px;
+        }
+        .publication-visual {
+          height: 135px;
+        }
+        .publication-visual svg {
+          width: 175px;
+          height: 101px;
+        }
+      }
+      @media (max-width: 580px) {
+        main {
+          padding: 12px;
+        }
+        .card {
+          padding: 23px 20px;
+          margin-bottom: 14px;
+          border-radius: 20px;
+        }
+        .profile-card {
+          position: relative;
+          display: block;
+          padding-top: 25px;
+        }
+        .profile-card h1 {
+          font-size: 27px;
+          letter-spacing: -0.7px;
+          padding-right: 82px;
+          min-height: 76px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 3px;
+        }
+        .profile-card h1 span {
+          font-size: 23px;
+        }
+        .profile-photo {
+          position: absolute;
+          top: 24px;
+          right: 20px;
+          width: 69px;
+          height: 95px;
+          border-radius: 14px;
+        }
+        .portrait-fallback svg {
+          width: 52px;
+          height: 56px;
+        }
+        .portrait-fallback span {
+          font-size: 8px;
+          letter-spacing: 1px;
+          margin-top: 0;
+        }
+        .affiliation {
+          font-size: 14px;
+          margin-top: 20px;
+        }
+        .bio {
+          font-size: 14px;
+        }
+        .qualifications {
+          font-size: 12px;
+          margin-top: 12px;
+        }
+        .links {
+          gap: 7px;
+        }
+        .pill {
+          font-size: 12px;
+          padding: 5px 10px;
+        }
+        h2 {
+          font-size: 22px;
+          margin-bottom: 17px;
+        }
+        .publication {
+          grid-template-columns: 1fr;
+          gap: 16px;
+          padding: 22px 0;
+        }
+        .publication-visual {
+          height: 144px;
+          max-width: 100%;
+        }
+        .publication-visual svg {
+          width: 202px;
+          height: 113px;
+        }
+        h3 {
+          font-size: 16px;
+        }
+        .authors,
+        .citation {
+          font-size: 13px;
+        }
+        .research-tags {
+          gap: 8px;
+        }
+        .research-tags li {
+          font-size: 13px;
+          padding: 6px 12px;
+        }
+        .numbered-list li {
+          font-size: 16px;
+        }
+        .tags span {
+          font-size: 11px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        .pill {
+          transition: none;
+        }
+      }
+      @media print {
+        html {
+          scroll-behavior: auto;
+        }
         body {
-            line-height: 1.6;
-            color: #333;
-            background-color: #fff;
+          background: white;
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+        main {
+          width: 100%;
+          padding: 0;
+          max-width: none;
         }
-
-        /* 头部导航 */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
+        .card {
+          box-shadow: none;
+          border: 0;
+          border-radius: 0;
+          padding: 16px 0;
+          margin-bottom: 12px;
         }
-
-        .name {
-            font-size: 24px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 25px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 600;
-            position: relative;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #000;
-        }
-
-        nav ul li a::after {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: #000;
-            transition: width 0.3s;
-        }
-
-        nav ul li a:hover::after {
-            width: 100%;
-        }
-
-        /* 个人资料区域 */
-        .profile {
-            display: flex;
-            margin-top: 30px;
-            gap: 30px;
-        }
-
-        .contact-info {
-            width: 250px;
-        }
-
-        .profile-pic {
-            width: 95px;
-            height: 95px;
-            border-radius: 40%;
-            object-fit: cover;
-            border: 3px solid #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: relative;
-            margin-top: 0.15cm;
-        }
-
-        .education-block,
-        .contact-icon {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .education-block i,
-        .contact-icon i {
-            color: #333;
-            margin-right: 10px;
-            font-size: 18px;
-        }
-
-        .education-block span,
-        .contact-icon span {
-            font-size: 16px;
-            color: #555;
-        }
-
-        /* 关于我部分 */
-        .about-me {
-            margin-top: 30px;
-        }
-
-        .about-me h2 {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .about-me p {
-            font-size: 16px;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        /* 研究兴趣部分 */
-        .research-interests {
-            margin-top: 40px;
-        }
-
-        .research-interests h2 {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        /* 新闻更新部分 */
-        .news-updates,
-        .news-patents,
-        .news-projects {
-            margin-top: 40px;
-        }
-
-        .news-updates h2,
-        .news-patents h2,
-        .news-projects h2 {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .news-item {
-            display: flex;
-            margin-bottom: 20px;
-            align-items: flex-start;
-        }
-
-        .news-date {
-            width: 30px;
-            font-weight: 600;
-            color: #333;
-            margin-right: 15px;
-        }
-
-        .news-content {
-            flex: 1;
-        }
-
-        .news-title {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .news-description {
-            font-size: 15px;
-            color: #555;
-        }
-
-        /* 自定义 [1] [2] [3] 编号样式 */
-        .bracket-list {
-            list-style: none;
-            counter-reset: item;
-            padding-left: 0;
-            margin: 0;
-        }
-
-        .bracket-list li {
-            counter-increment: item;
-            position: relative;
-            padding-left: 3.2em;
-            margin-bottom: 10px;
-            line-height: 1.8;
-        }
-
-        .bracket-list li::before {
-            content: "[" counter(item) "]";
-            position: absolute;
-            left: 0;
-            top: 0;
-            font-weight: 600;
-            color: #333;
-        }
-
-        /* 页脚 */
+        .links,
         footer {
-            margin-top: 60px;
-            padding: 30px 0;
-            background-color: #1a1a1a;
-            color: #fff;
-            text-align: center;
+          display: none;
         }
-
-        .footer-links {
-            margin-bottom: 15px;
+        .profile-card {
+          display: grid;
+          position: static;
+          grid-template-columns: minmax(0, 1fr) 110px;
+          break-inside: avoid;
         }
-
-        .footer-links a {
-            color: #fff;
-            margin: 0 10px;
-            text-decoration: none;
+        .profile-photo {
+          position: relative;
+          top: auto;
+          right: auto;
         }
-
-        .footer-copyright {
-            font-size: 14px;
-            color: #ccc;
+        .publication {
+          grid-template-columns: 160px minmax(0, 1fr);
+          gap: 18px;
+          break-inside: avoid;
+          page-break-inside: avoid;
         }
-
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            nav ul {
-                margin-top: 20px;
-            }
-
-            nav ul li {
-                margin-left: 15px;
-                margin-right: 15px;
-            }
-
-            .profile {
-                flex-direction: column;
-            }
-
-            .contact-info {
-                width: 100%;
-                margin-bottom: 3px;
-            }
-
-            .news-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .news-date {
-                margin-right: 0;
-                margin-bottom: 10px;
-            }
+        .numbered-list li {
+          break-inside: avoid;
+          page-break-inside: avoid;
         }
+        h2,
+        h3 {
+          break-after: avoid;
+          page-break-after: avoid;
+        }
+        p {
+          orphans: 3;
+          widows: 3;
+        }
+        .publication-visual {
+          box-shadow: none;
+        }
+        .paper-links .pill {
+          box-shadow: none;
+        }
+      }
     </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <div class="name">JIAYIN LI</div>
-            <nav>
-                <ul>
-                    <li><a href="#about">ABOUT ME</a></li>
-                    <li><a href="#research">RESEARCH INTERESTS</a></li>
-                    <li><a href="#papers">PAPERS PUBLICATION</a></li>
-                    <li><a href="#license">PATENTS</a></li>
-                    <li><a href="#projects">PROJECTS</a></li>
-                    <li><a href="#awards">AWARDS</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <div class="profile">
-            <div class="contact-info">
-                <div class="education-block">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span><b>Degree:</b> Ph.D., Post-Doctor</span>
-                </div>
-                <div class="education-block">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span><b>Qualification:</b> Master Tutor</span>
-                </div>
-                <div class="contact-icon">
-                    <i class="fas fa-envelope"></i>
-                    <span><b>Email:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="137f7a797a726a7a7d2123222a53747e727a7f3d707c7e">lijiayin2019@gmail.com</a></span>
-                </div>
-            </div>
-            <div class="profile-pic-container">
-                <img src="./pic/scholar.png" alt="JIAYIN LI" class="profile-pic">
-            </div>
+  </head>
+  <body>
+    <main>
+      <header
+        class="card profile-card"
+        id="about"
+      >
+        <div class="profile-copy">
+          <h1>李家印 <span>（Jiayin Li）</span></h1>
+          <p class="affiliation">
+            <span
+              >College of Computer Science and Cyber Security, Fujian Normal
+              University</span
+            >
+          </p>
+          <p class="bio">
+            My name is Jiayin Li. I am currently a full-time faculty member at the
+            College of Computer Science and Cyber Security at Fujian Normal University,
+            the Fujian Provincial Key Lab of Network Security &amp; Cryptology, and
+            setting up the AI Security &amp; Application <b>(AISA)</b> Research Group.
+            Here is my Resume.
+          </p>
+          <p class="qualifications">
+            <strong>Degree:</strong> Ph.D., Post-Doctor
+            <span aria-hidden="true">&nbsp; · &nbsp;</span>
+            <strong>Qualification:</strong> Master Tutor
+          </p>
+          <p class="contact-email">
+            <strong>Email:</strong>
+            <a href="mailto:lijiayin2019@gmail.com">lijiayin2019@gmail.com</a>
+          </p>
+          <nav
+            class="links"
+            aria-label="Contact and page sections"
+          >
+            <a
+              class="pill"
+              href="#papers"
+              >Publications</a
+            ><a
+              class="pill"
+              href="#license"
+              >Patents</a
+            ><a
+              class="pill"
+              href="#projects"
+              >Projects</a
+            >
+          </nav>
         </div>
-
-        <section id="about" class="about-me">
-            <h2>About Me</h2>
-            <p>My name is Jiayin Li. I am currently a full-time faculty member at the College of Computer Science and Cyber Security at Fujian Normal University, the Fujian Provincial Key Lab of Network Security &amp; Cryptology, and setting up the AI Security &amp; Application <b>(AISA)</b> Research Group. Here is my Resume.</p>
-        </section>
-
-        <section id="research" class="research-interests">
-            <h2>Research Interests</h2>
-            <ul style="margin-left: 1.5em; line-height: 1.8;">
-                <li>AI Security</li>
-                <li>Data Security</li>
-                <li>Distributed Deep Learning Security</li>
-            </ul>
-        </section>
-
-        <section id="papers" class="news-updates">
-            <h2>Papers Publication</h2>
-            <div class="news-item">
-                <div class="news-content">
-                    <ol class="bracket-list">
-                        <li>W. Cai, <b>J. Li*(李家印)</b>, L. Xu, R. Lin. Pseudo Knowledge Driven and Lightweight Reverse Distillation for Multimodal Anomaly Detection[J]. <i>Knowledge-Based Systems(KBS)</i>, 333, pp.114930-114941, 2026. <b>(SCI1-Top, Corresponding Author)</b></li>
-                        <li>X. Lan, <b>J. Li*(李家印)</b>, Z. Ying, X. Han, et al. FusionMIA: Enhancing Membership Inference Attacks with Spy Clients and Shadow Models in Federated Learning[C]. <i>International Conference on Knowledge Science, Engineering and Management (KSEM)</i>, pp.279-293, 2025-11. <b>(CCF C, Corresponding Author)</b></li>
-                        <li>P. Li, W. Lin, D. Yu, <b>J. Li*(李家印)</b>, et al. High-Dimensional Time Series Anomaly Detection Method Based on Multimodal Hypergraph Generative Adversarial Networks[C]. <i>International Conference on Cloud and Network Computing. Singapore: Springer Nature Singapore (ICCNC)</i>, pp.228-241, 2025-10. <b>(EI, Corresponding Author)</b></li>
-                        <li><b>J. Li(李家印)</b>, S. Xu, X. Han, J. Ning, et al. Verifiable and Lightweight Multi-Round Secure Federated Learning[J]. <i>IEEE Transactions on Dependable and Secure Computing (TDSC)</i>, 23(1), pp.403-416, 2025. <b>(CCF A)</b></li>
-                        <li>Y. Zhong, R. Lin, <b>J. Li(李家印)</b>, S. Wang, et al. Bridging and Compressing Feature and Semantic Spaces for Robust Graph Neural Networks: An Information Theory Perspective[C]. <i>ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)</i>, pp.4571-4582, 2024-08. <b>(CCF A)</b></li>
-                        <li>徐瑞阳, 徐振宇, <b>李家印*</b>等. 基于节点交互度的社会网络链路预测[J]. <i>计算机系统应用</i>, 2024-01. <b>(CCF C, Corresponding Author)</b></li>
-                        <li><b>J. Li(李家印)</b>, W. Guo, L. Xie, X. Liu, et al. Privacy-Preserving Object Detection With Poisoning Recognition for Autonomous Vehicles[J]. <i>IEEE Transactions on Network Science and Engineering (TNSE)</i>, 10(3), pp.1487-1500, 2023. <b>(SCI2)</b></li>
-                        <li>W. Guo, <b>J. Li*(李家印)</b>, X. Liu, Y. Yang. Privacy-Preserving Compressive Sensing for Real-Time Traffic Monitoring in Urban City[J]. <i>IEEE Transactions on Vehicular Technology (TVT)</i>, 69(12), pp.14510-14522, 2020. <b>(SCI2, Corresponding Author)</b></li>
-                        <li><b>李家印</b>, 郭文忠, 李小燕等. 基于智能交通的隐私保护道路状态实时监测方案[J]. <i>通信学报</i>, 41(7), pp.73-84, 2020-11. <b>(CCF B)</b></li>
-                        <li><b>J. Li(李家印)</b>, W. Guo, Z. Ma, X. Meng, et al. Privacy-Preserving Compressive Sensing for Traffic Estimation[C]. <i>IEEE Global Communications Conference (GlobeCom)</i>, 2019-12. <b>(CCF C)</b></li>
-                        <li><b>J. Li(李家印)</b>, H. Zheng, X. Feng, Z. Chen, et al. Traffic Estimation in Road Networks via Compressive Sensing[C]. <i>IEEE International Conference on Wireless Communications and Signal Processing (WCSP)</i>, 2017-10. <b>(EI)</b></li>
-                    </ol>
-                </div>
+        <!-- Place the original portrait in pic/scholar.png beside this HTML file. -->
+        <div class="profile-photo">
+          <div
+            class="portrait-fallback"
+            role="img"
+            aria-label="李家印头像占位图"
+          >
+            <svg
+              viewBox="0 0 100 110"
+              fill="none"
+              aria-hidden="true"
+            >
+              <circle
+                cx="50"
+                cy="33"
+                r="23"
+                fill="#a0b8ca"
+              />
+              <path
+                d="M10 106V94a40 40 0 0 1 80 0v12"
+                fill="#a0b8ca"
+              /></svg
+            ><span>JIAYIN LI</span>
+          </div>
+          <img
+            src="./pic/scholar.png"
+            alt="李家印 Jiayin Li"
+            onerror="this.hidden=true;this.style.display='none'"
+            onload="this.previousElementSibling.setAttribute('aria-hidden','true')"
+          />
+        </div>
+      </header>
+      <section
+        class="card publications-card"
+        id="papers"
+        aria-labelledby="papers-heading"
+      >
+        <h2 id="papers-heading">Selected Publications</h2>
+        <article class="publication">
+          <div class="publication-visual">
+            <svg
+              viewBox="0 0 240 154"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-labelledby="figure-title-11"
+            >
+              <title id="figure-title-11">
+                主题示意：安全联邦学习中的数据投毒检测、恶意更新排除与客户端掉线容错聚合（非论文原图）
+              </title>
+              <rect
+                x="11"
+                y="13"
+                width="44"
+                height="23"
+                rx="7"
+                fill="#e4f2ee"
+              />
+              <text
+                x="33"
+                y="28"
+                fill="#617b8d"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                Benign
+              </text>
+              <rect
+                x="11"
+                y="49"
+                width="44"
+                height="23"
+                rx="7"
+                fill="#f8e3e1"
+              />
+              <text
+                x="33"
+                y="64"
+                fill="#d57776"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                Poison
+              </text>
+              <rect
+                x="11"
+                y="85"
+                width="44"
+                height="23"
+                rx="7"
+                fill="#edf0f2"
+              />
+              <text
+                x="33"
+                y="100"
+                fill="#98a3aa"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                Offline
+              </text>
+              <path
+                d="M58 25L83 51"
+                stroke="#62aaa0"
+                stroke-width="1.8"
+              />
+              <path
+                d="M78 47l5 4-5 4"
+                stroke="#62aaa0"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M58 61L83 61"
+                stroke="#d57776"
+                stroke-width="1.8"
+              />
+              <path
+                d="M78 57l5 4-5 4"
+                stroke="#d57776"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M59 96L79 79"
+                stroke="#bfc8ce"
+                stroke-width="1.8"
+                stroke-dasharray="3 4"
+              />
+              <text
+                x="70"
+                y="94"
+                fill="#98a3aa"
+                font-size="14"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                ×
+              </text>
+              <rect
+                x="88"
+                y="37"
+                width="62"
+                height="52"
+                rx="7"
+                fill="#e1eef6"
+              />
+              <text
+                x="119"
+                y="57"
+                fill="#617b8d"
+                font-size="9"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                Poisoning
+              </text>
+              <text
+                x="119"
+                y="73"
+                fill="#617b8d"
+                font-size="9"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                detection
+              </text>
+              <path
+                d="M119 92L119 112"
+                stroke="#d57776"
+                stroke-width="1.8"
+              />
+              <rect
+                x="93"
+                y="114"
+                width="52"
+                height="19"
+                rx="7"
+                fill="#f8e3e1"
+              />
+              <text
+                x="119"
+                y="127"
+                fill="#d57776"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                Exclude
+              </text>
+              <path
+                d="M152 61L173 61"
+                stroke="#62aaa0"
+                stroke-width="1.8"
+              />
+              <path
+                d="M168 57l5 4-5 4"
+                stroke="#62aaa0"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <rect
+                x="177"
+                y="37"
+                width="51"
+                height="52"
+                rx="7"
+                fill="#e4f2ee"
+              />
+              <g transform="translate(203 52) scale(0.72)">
+                <path
+                  d="M-6 0v-5a6 6 0 0 1 12 0v5"
+                  stroke="#62aaa0"
+                  stroke-width="2.5"
+                />
+                <rect
+                  x="-10"
+                  y="-1"
+                  width="20"
+                  height="16"
+                  rx="4"
+                  fill="#62aaa0"
+                />
+                <circle
+                  cy="5"
+                  r="2"
+                  fill="white"
+                />
+                <path
+                  d="M0 5v5"
+                  stroke="white"
+                  stroke-width="1.5"
+                />
+              </g>
+              <text
+                x="203"
+                y="79"
+                fill="#617b8d"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                Aggregate
+              </text>
+              <text
+                x="202"
+                y="109"
+                fill="#617b8d"
+                font-size="9"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                Dropout
+              </text>
+              <text
+                x="202"
+                y="122"
+                fill="#617b8d"
+                font-size="9"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                resilience
+              </text>
+              <text
+                x="49"
+                y="143"
+                fill="#617b8d"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                MASKED UPDATES
+              </text></svg
+            ><span>TNSE <span class="figure-dot">·</span> 2026</span>
+          </div>
+          <div class="publication-body">
+            <h3>
+              Data Poisoning Detection for Secure Federated Learning With
+              Dropout-Resilient Aggregation
+            </h3>
+            <p class="authors">
+              <b>Jiayin Li (李家印)</b>, Shengmin Xu, Xingshuo Han, Xinlei He
+            </p>
+            <p class="citation">
+              <i>IEEE Transactions on Network Science and Engineering (TNSE)</i>, 13,
+              pp.11255–11265, 2026.<br />DOI:
+              <a
+                href="https://doi.org/10.1109/TNSE.2026.3727620"
+                target="_blank"
+                rel="noopener noreferrer"
+                >10.1109/TNSE.2026.3727620</a
+              >
+            </p>
+            <div
+              class="paper-links"
+              aria-label="论文官方链接"
+            >
+              <a
+                class="pill paper-download"
+                href="https://ieeexplore.ieee.org/document/11667712/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="官方下载入口：Data Poisoning Detection for Secure Federated Learning With Dropout-Resilient Aggregation"
+                title="打开 IEEE Xplore 官方论文页面，按站点权限获取全文"
+                >官方下载 <span aria-hidden="true">↗</span></a
+              ><span class="publisher-name">IEEE Xplore</span>
             </div>
-        </section>
-
-        <section id="license" class="news-patents">
-            <h2>Patents</h2>
-            <div class="news-item">
-                <div class="news-content">
-                    <ol class="bracket-list">
-                        <li>一种基于Bert的工控协议模糊测试用例筛选方法及系统, 专利号：ZL202310652941.2</li>
-                        <li>基于深度卷积神经网络的云中保护外包数据隐私保护系统, 专利号: ZL201910653448.6</li>
-                        <li>基于城市交通的隐私保护压缩感知实时交通监测方法, 专利号：ZL202010649250.3</li>
-                        <li>一种实用性云端隐私保护外包计算系统及其计算方法, 专利号：ZL201910723361.1</li>
-                        <li>一种基于车辆数据隐私保护与压缩感知的交通估计方法, 专利号：ZL201811551841.6</li>
-                    </ol>
-                </div>
+            <div class="tags">
+              <span>Data Poisoning Detection</span><span>Secure Federated Learning</span
+              ><span>Dropout Resilience</span>
             </div>
-        </section>
-
-        <section id="projects" class="news-projects">
-            <h2>Projects</h2>
-            <div class="news-item">
-                <div class="news-content">
-                    <ol class="bracket-list">
-                        <li>人工智能数据安全关键技术研究&lt;福建省重大专项子项目, No.2025YZ040003&gt;, 2025-2028, 副组长</li>
-                        <li>交通网络数据的层次化隐私保护研究&lt;福建省青年基金项目, No.2023J05128&gt;, 2023-2026, 主持</li>
-                        <li>面向自动驾驶汽车具有中毒防御机制隐私保护方法&lt;福州大学开放课题项目&gt;, 2022-2023, 主持</li>
-                    </ol>
-                </div>
+          </div>
+        </article>
+        <article class="publication">
+          <div class="publication-visual">
+            <svg
+              viewBox="0 0 240 154"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-labelledby="figure-title-0"
+            >
+              <title id="figure-title-0">
+                主题示意：多模态输入、知识蒸馏与异常区域检测（非论文原图）
+              </title>
+              <rect
+                x="12"
+                y="19"
+                width="48"
+                height="37"
+                rx="7"
+                fill="#e1eef6"
+              />
+              <rect
+                x="12"
+                y="66"
+                width="48"
+                height="37"
+                rx="7"
+                fill="#e4f2ee"
+              />
+              <path
+                d="M19 48l11-14 8 8 9-13 7 19z"
+                fill="#91b7ce"
+              />
+              <circle
+                cx="24"
+                cy="28"
+                r="3"
+                fill="#d4ae61"
+              />
+              <path
+                d="M17 87h7l4-10 7 19 6-15 6 6h8"
+                stroke="#62aaa0"
+                stroke-width="2"
+              />
+              <path
+                d="M61 37L82 60"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <path
+                d="M61 84L82 60"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <path
+                d="M81 60L93 60"
+                stroke="#649bbd"
+                stroke-width="1.8"
+              />
+              <path
+                d="M88 56l5 4-5 4"
+                stroke="#649bbd"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <rect
+                x="99"
+                y="36"
+                width="49"
+                height="49"
+                rx="7"
+                fill="#ede8f8"
+              />
+              <text
+                x="123"
+                y="57"
+                fill="#617b8d"
+                font-size="9"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                Teacher
+              </text>
+              <text
+                x="123"
+                y="72"
+                fill="#617b8d"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                knowledge
+              </text>
+              <path
+                d="M123 88L147 110"
+                stroke="#9a88bc"
+                stroke-width="1.8"
+              />
+              <path
+                d="M142 106l5 4-5 4"
+                stroke="#9a88bc"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <rect
+                x="157"
+                y="97"
+                width="68"
+                height="27"
+                rx="7"
+                fill="#e4f2ee"
+              />
+              <text
+                x="191"
+                y="115"
+                fill="#617b8d"
+                font-size="9"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                Student
+              </text>
+              <path
+                d="M151 60L173 60"
+                stroke="#649bbd"
+                stroke-width="1.8"
+              />
+              <path
+                d="M168 56l5 4-5 4"
+                stroke="#649bbd"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <rect
+                x="181"
+                y="35"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#649bbd"
+              />
+              <rect
+                x="190"
+                y="35"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="199"
+                y="35"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="208"
+                y="35"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#649bbd"
+              />
+              <rect
+                x="217"
+                y="35"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="181"
+                y="44"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="190"
+                y="44"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#649bbd"
+              />
+              <rect
+                x="199"
+                y="44"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="208"
+                y="44"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="217"
+                y="44"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#649bbd"
+              />
+              <rect
+                x="181"
+                y="53"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="190"
+                y="53"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="199"
+                y="53"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#649bbd"
+              />
+              <rect
+                x="208"
+                y="53"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="217"
+                y="53"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="181"
+                y="62"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#649bbd"
+              />
+              <rect
+                x="190"
+                y="62"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="199"
+                y="62"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="208"
+                y="62"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#649bbd"
+              />
+              <rect
+                x="217"
+                y="62"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="181"
+                y="71"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="190"
+                y="71"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#649bbd"
+              />
+              <rect
+                x="199"
+                y="71"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="208"
+                y="71"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="217"
+                y="71"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#649bbd"
+              />
+              <rect
+                x="199"
+                y="53"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#d57776"
+              />
+              <rect
+                x="208"
+                y="53"
+                width="7"
+                height="7"
+                rx="1"
+                fill="#e7a39a"
+              />
+              <text
+                x="204"
+                y="91"
+                fill="#617b8d"
+                font-size="9"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                Anomaly
+              </text>
+              <text
+                x="36"
+                y="120"
+                fill="#617b8d"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                MULTIMODAL
+              </text></svg
+            ><span>KBS <span class="figure-dot">·</span> 2026</span>
+          </div>
+          <div class="publication-body">
+            <h3>
+              Pseudo Knowledge Driven and Lightweight Reverse Distillation for
+              Multimodal Anomaly Detection
+            </h3>
+            <p class="authors">W. Cai, <b>J. Li*(李家印)</b>, L. Xu, R. Lin</p>
+            <p class="citation">
+              <i>Knowledge-Based Systems(KBS)</i>, 333, pp.114930-114941, 2026.
+              <b>(SCI1-Top, Corresponding Author)</b>
+            </p>
+            <div
+              class="paper-links"
+              aria-label="论文官方链接"
+            >
+              <a
+                class="pill paper-download"
+                href="https://www.sciencedirect.com/science/article/pii/S0950705125019689"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="官方下载入口：Pseudo Knowledge Driven and Lightweight Reverse Distillation for Multimodal Anomaly Detection"
+                title="打开 ScienceDirect 官方论文页面，按站点权限获取全文"
+                >官方下载 <span aria-hidden="true">↗</span></a
+              ><span class="publisher-name">ScienceDirect</span>
             </div>
-        </section>
-    </div>
-
+            <div class="tags">
+              <span>Multimodal Learning</span><span>Anomaly Detection</span>
+            </div>
+          </div>
+        </article>
+        <article class="publication">
+          <div class="publication-visual">
+            <svg
+              viewBox="0 0 240 154"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-labelledby="figure-title-1"
+            >
+              <title id="figure-title-1">
+                主题示意：联邦学习中的间谍客户端、影子模型与成员推断（非论文原图）
+              </title>
+              <path
+                d="M45 36L109 57"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <path
+                d="M45 103L109 65"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <path
+                d="M119 26L119 46"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <path
+                d="M143 62L171 62"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <rect
+                x="19"
+                y="22"
+                width="50"
+                height="26"
+                rx="7"
+                fill="#e1eef6"
+              />
+              <text
+                x="44"
+                y="39"
+                fill="#617b8d"
+                font-size="9"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                Client
+              </text>
+              <rect
+                x="19"
+                y="91"
+                width="50"
+                height="26"
+                rx="7"
+                fill="#f8edcf"
+              />
+              <text
+                x="44"
+                y="108"
+                fill="#617b8d"
+                font-size="9"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                Spy client
+              </text>
+              <rect
+                x="91"
+                y="11"
+                width="56"
+                height="22"
+                rx="7"
+                fill="#e1eef6"
+              />
+              <text
+                x="119"
+                y="26"
+                fill="#617b8d"
+                font-size="9"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                Client
+              </text>
+              <rect
+                x="94"
+                y="45"
+                width="51"
+                height="35"
+                rx="7"
+                fill="#e4f2ee"
+              />
+              <text
+                x="120"
+                y="61"
+                fill="#617b8d"
+                font-size="9"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                Global
+              </text>
+              <text
+                x="120"
+                y="73"
+                fill="#617b8d"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                model
+              </text>
+              <rect
+                x="169"
+                y="41"
+                width="58"
+                height="40"
+                rx="7"
+                fill="#ede8f8"
+              />
+              <text
+                x="198"
+                y="58"
+                fill="#617b8d"
+                font-size="9"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                Shadow
+              </text>
+              <text
+                x="198"
+                y="71"
+                fill="#617b8d"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                models
+              </text>
+              <path
+                d="M198 84L198 105"
+                stroke="#9a88bc"
+                stroke-width="1.8"
+              />
+              <path
+                d="M193 101l5 4-5 4"
+                stroke="#9a88bc"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <rect
+                x="160"
+                y="112"
+                width="72"
+                height="22"
+                rx="7"
+                fill="#f8edcf"
+              />
+              <text
+                x="196"
+                y="127"
+                fill="#617b8d"
+                font-size="10"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                IN / OUT?
+              </text>
+              <path
+                d="M71 104L160 123"
+                stroke="#d4ae61"
+                stroke-width="1.8"
+                stroke-dasharray="4 4"
+              />
+              <text
+                x="80"
+                y="143"
+                fill="#617b8d"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                MEMBERSHIP INFERENCE
+              </text></svg
+            ><span>KSEM <span class="figure-dot">·</span> 2025</span>
+          </div>
+          <div class="publication-body">
+            <h3>
+              FusionMIA: Enhancing Membership Inference Attacks with Spy Clients and
+              Shadow Models in Federated Learning
+            </h3>
+            <p class="authors">X. Lan, <b>J. Li*(李家印)</b>, Z. Ying, X. Han, et al</p>
+            <p class="citation">
+              <i
+                >International Conference on Knowledge Science, Engineering and
+                Management (KSEM)</i
+              >, pp.279-293, 2025-11. <b>(CCF C, Corresponding Author)</b>
+            </p>
+            <div
+              class="paper-links"
+              aria-label="论文官方链接"
+            >
+              <a
+                class="pill paper-download"
+                href="https://link.springer.com/chapter/10.1007/978-981-95-3055-7_22"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="官方下载入口：FusionMIA: Enhancing Membership Inference Attacks with Spy Clients and Shadow Models in Federated Learning"
+                title="打开 Springer Nature 官方论文页面，按站点权限获取全文"
+                >官方下载 <span aria-hidden="true">↗</span></a
+              ><a
+                class="pill paper-pdf"
+                href="https://link.springer.com/content/pdf/10.1007/978-981-95-3055-7_22.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="官方 PDF：FusionMIA: Enhancing Membership Inference Attacks with Spy Clients and Shadow Models in Federated Learning"
+                title="官方 PDF；可能需要登录或机构访问权限"
+                >PDF <span aria-hidden="true">↓</span></a
+              ><span class="publisher-name">Springer Nature</span>
+            </div>
+            <div class="tags">
+              <span>Federated Learning</span><span>Membership Inference</span>
+            </div>
+          </div>
+        </article>
+        <article class="publication">
+          <div class="publication-visual">
+            <svg
+              viewBox="0 0 240 154"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-labelledby="figure-title-2"
+            >
+              <title id="figure-title-2">
+                主题示意：时间序列、超图关系与生成对抗学习（非论文原图）
+              </title>
+              <rect
+                x="10"
+                y="24"
+                width="67"
+                height="93"
+                rx="7"
+                fill="#e1eef6"
+              />
+              <path
+                d="M16 42h6l5-8 7 13 6-9 8 5 7-8 6 7h10"
+                stroke="#649bbd"
+                stroke-width="1.8"
+              />
+              <path
+                d="M16 68h6l5-8 7 13 6-9 8 5 7-8 6 7h10"
+                stroke="#62aaa0"
+                stroke-width="1.8"
+              />
+              <path
+                d="M16 94h6l5-8 7 13 6-9 8 5 7-8 6 7h10"
+                stroke="#d4ae61"
+                stroke-width="1.8"
+              />
+              <path
+                d="M79 69L93 69"
+                stroke="#649bbd"
+                stroke-width="1.8"
+              />
+              <path
+                d="M88 65l5 4-5 4"
+                stroke="#649bbd"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <ellipse
+                cx="126"
+                cy="62"
+                rx="26"
+                ry="19"
+                transform="rotate(-35 126 62)"
+                fill="#ede8f8"
+              />
+              <ellipse
+                cx="131"
+                cy="85"
+                rx="28"
+                ry="18"
+                transform="rotate(35 131 85)"
+                fill="#e4f2ee"
+              />
+              <path
+                d="M107 64L132 46"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <path
+                d="M107 64L141 77"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <path
+                d="M141 77L115 89"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <path
+                d="M141 77L151 97"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <circle
+                cx="107"
+                cy="64"
+                r="5"
+                fill="#9a88bc"
+              />
+              <circle
+                cx="132"
+                cy="46"
+                r="5"
+                fill="#9a88bc"
+              />
+              <circle
+                cx="141"
+                cy="77"
+                r="5"
+                fill="#9a88bc"
+              />
+              <circle
+                cx="115"
+                cy="89"
+                r="5"
+                fill="#9a88bc"
+              />
+              <circle
+                cx="151"
+                cy="97"
+                r="5"
+                fill="#9a88bc"
+              />
+              <path
+                d="M159 72L173 72"
+                stroke="#649bbd"
+                stroke-width="1.8"
+              />
+              <path
+                d="M168 68l5 4-5 4"
+                stroke="#649bbd"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <rect
+                x="178"
+                y="35"
+                width="52"
+                height="28"
+                rx="7"
+                fill="#e4f2ee"
+              />
+              <text
+                x="204"
+                y="53"
+                fill="#617b8d"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                Generator
+              </text>
+              <rect
+                x="178"
+                y="85"
+                width="52"
+                height="28"
+                rx="7"
+                fill="#f8edcf"
+              />
+              <text
+                x="204"
+                y="102"
+                fill="#617b8d"
+                font-size="9"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                Critic
+              </text>
+              <path
+                d="M192 65v16m22 0V65"
+                stroke="#62aaa0"
+                stroke-width="1.8"
+              />
+              <text
+                x="44"
+                y="134"
+                fill="#617b8d"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                TIME SERIES
+              </text>
+              <text
+                x="126"
+                y="134"
+                fill="#617b8d"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                HYPERGRAPH
+              </text></svg
+            ><span>ICCNC <span class="figure-dot">·</span> 2025</span>
+          </div>
+          <div class="publication-body">
+            <h3>
+              High-Dimensional Time Series Anomaly Detection Method Based on Multimodal
+              Hypergraph Generative Adversarial Networks
+            </h3>
+            <p class="authors">P. Li, W. Lin, D. Yu, <b>J. Li*(李家印)</b>, et al</p>
+            <p class="citation">
+              <i
+                >International Conference on Cloud and Network Computing. Singapore:
+                Springer Nature Singapore (ICCNC)</i
+              >, pp.228-241, 2025-10. <b>(EI, Corresponding Author)</b>
+            </p>
+            <div
+              class="paper-links"
+              aria-label="论文官方链接"
+            >
+              <a
+                class="pill paper-download"
+                href="https://link.springer.com/chapter/10.1007/978-981-95-0129-8_17"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="官方下载入口：High-Dimensional Time Series Anomaly Detection Method Based on Multimodal Hypergraph Generative Adversarial Networks"
+                title="打开 Springer Nature 官方论文页面，按站点权限获取全文"
+                >官方下载 <span aria-hidden="true">↗</span></a
+              ><a
+                class="pill paper-pdf"
+                href="https://link.springer.com/content/pdf/10.1007/978-981-95-0129-8_17.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="官方 PDF：High-Dimensional Time Series Anomaly Detection Method Based on Multimodal Hypergraph Generative Adversarial Networks"
+                title="官方 PDF；可能需要登录或机构访问权限"
+                >PDF <span aria-hidden="true">↓</span></a
+              ><span class="publisher-name">Springer Nature</span>
+            </div>
+            <div class="tags"><span>Time Series</span><span>Hypergraph</span></div>
+          </div>
+        </article>
+        <article class="publication">
+          <div class="publication-visual">
+            <svg
+              viewBox="0 0 240 154"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-labelledby="figure-title-3"
+            >
+              <title id="figure-title-3">
+                主题示意：多轮联邦学习中的安全聚合与更新验证（非论文原图）
+              </title>
+              <path
+                d="M62 37a70 51 0 0 1 123 19M180 113a70 51 0 0 1-123-21"
+                stroke="#bddace"
+                stroke-width="2"
+                stroke-dasharray="5 4"
+              />
+              <path
+                d="M44 55L120 76"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <rect
+                x="28"
+                y="44"
+                width="32"
+                height="22"
+                rx="7"
+                fill="#e1eef6"
+              />
+              <g transform="translate(44 53) scale(0.48)">
+                <path
+                  d="M-6 0v-5a6 6 0 0 1 12 0v5"
+                  stroke="#649bbd"
+                  stroke-width="2.5"
+                />
+                <rect
+                  x="-10"
+                  y="-1"
+                  width="20"
+                  height="16"
+                  rx="4"
+                  fill="#649bbd"
+                />
+                <circle
+                  cy="5"
+                  r="2"
+                  fill="white"
+                />
+                <path
+                  d="M0 5v5"
+                  stroke="white"
+                  stroke-width="1.5"
+                />
+              </g>
+              <path
+                d="M53 114L120 76"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <rect
+                x="37"
+                y="103"
+                width="32"
+                height="22"
+                rx="7"
+                fill="#e1eef6"
+              />
+              <g transform="translate(53 112) scale(0.48)">
+                <path
+                  d="M-6 0v-5a6 6 0 0 1 12 0v5"
+                  stroke="#649bbd"
+                  stroke-width="2.5"
+                />
+                <rect
+                  x="-10"
+                  y="-1"
+                  width="20"
+                  height="16"
+                  rx="4"
+                  fill="#649bbd"
+                />
+                <circle
+                  cy="5"
+                  r="2"
+                  fill="white"
+                />
+                <path
+                  d="M0 5v5"
+                  stroke="white"
+                  stroke-width="1.5"
+                />
+              </g>
+              <path
+                d="M190 52L120 76"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <rect
+                x="174"
+                y="41"
+                width="32"
+                height="22"
+                rx="7"
+                fill="#e1eef6"
+              />
+              <g transform="translate(190 50) scale(0.48)">
+                <path
+                  d="M-6 0v-5a6 6 0 0 1 12 0v5"
+                  stroke="#649bbd"
+                  stroke-width="2.5"
+                />
+                <rect
+                  x="-10"
+                  y="-1"
+                  width="20"
+                  height="16"
+                  rx="4"
+                  fill="#649bbd"
+                />
+                <circle
+                  cy="5"
+                  r="2"
+                  fill="white"
+                />
+                <path
+                  d="M0 5v5"
+                  stroke="white"
+                  stroke-width="1.5"
+                />
+              </g>
+              <path
+                d="M188 113L120 76"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <rect
+                x="172"
+                y="102"
+                width="32"
+                height="22"
+                rx="7"
+                fill="#e1eef6"
+              />
+              <g transform="translate(188 111) scale(0.48)">
+                <path
+                  d="M-6 0v-5a6 6 0 0 1 12 0v5"
+                  stroke="#649bbd"
+                  stroke-width="2.5"
+                />
+                <rect
+                  x="-10"
+                  y="-1"
+                  width="20"
+                  height="16"
+                  rx="4"
+                  fill="#649bbd"
+                />
+                <circle
+                  cy="5"
+                  r="2"
+                  fill="white"
+                />
+                <path
+                  d="M0 5v5"
+                  stroke="white"
+                  stroke-width="1.5"
+                />
+              </g>
+              <rect
+                x="88"
+                y="52"
+                width="64"
+                height="46"
+                rx="7"
+                fill="#e4f2ee"
+              />
+              <g transform="translate(109 71) scale(0.7)">
+                <path
+                  d="M-6 0v-5a6 6 0 0 1 12 0v5"
+                  stroke="#62aaa0"
+                  stroke-width="2.5"
+                />
+                <rect
+                  x="-10"
+                  y="-1"
+                  width="20"
+                  height="16"
+                  rx="4"
+                  fill="#62aaa0"
+                />
+                <circle
+                  cy="5"
+                  r="2"
+                  fill="white"
+                />
+                <path
+                  d="M0 5v5"
+                  stroke="white"
+                  stroke-width="1.5"
+                />
+              </g>
+              <text
+                x="134"
+                y="80"
+                fill="#62aaa0"
+                font-size="19"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                ✓
+              </text>
+              <text
+                x="120"
+                y="39"
+                fill="#617b8d"
+                font-size="10"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                Secure aggregation
+              </text>
+              <text
+                x="120"
+                y="129"
+                fill="#617b8d"
+                font-size="10"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                Round 1 → 2 → 3
+              </text>
+              <text
+                x="120"
+                y="145"
+                fill="#617b8d"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                VERIFIABLE UPDATES
+              </text></svg
+            ><span>TDSC <span class="figure-dot">·</span> 2025</span>
+          </div>
+          <div class="publication-body">
+            <h3>Verifiable and Lightweight Multi-Round Secure Federated Learning</h3>
+            <p class="authors"><b>J. Li(李家印)</b>, S. Xu, X. Han, J. Ning, et al</p>
+            <p class="citation">
+              <i>IEEE Transactions on Dependable and Secure Computing (TDSC)</i>, 23(1),
+              pp.403-416, 2025. <b>(CCF A)</b>
+            </p>
+            <div
+              class="paper-links"
+              aria-label="论文官方链接"
+            >
+              <a
+                class="pill paper-download"
+                href="https://ieeexplore.ieee.org/document/11150747/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="官方下载入口：Verifiable and Lightweight Multi-Round Secure Federated Learning"
+                title="打开 IEEE Xplore 官方论文页面，按站点权限获取全文"
+                >官方下载 <span aria-hidden="true">↗</span></a
+              ><span class="publisher-name">IEEE Xplore</span>
+            </div>
+            <div class="tags">
+              <span>Federated Learning</span><span>Secure Computing</span>
+            </div>
+          </div>
+        </article>
+        <article class="publication">
+          <div class="publication-visual">
+            <svg
+              viewBox="0 0 240 154"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-labelledby="figure-title-4"
+            >
+              <title id="figure-title-4">
+                主题示意：图神经网络的特征及语义空间压缩（非论文原图）
+              </title>
+              <path
+                d="M20 45L51 25"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <path
+                d="M51 25L73 60"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <path
+                d="M20 45L29 91"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <path
+                d="M73 60L29 91"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <path
+                d="M73 60L65 111"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <path
+                d="M29 91L65 111"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <circle
+                cx="20"
+                cy="45"
+                r="5"
+                fill="#649bbd"
+              />
+              <circle
+                cx="51"
+                cy="25"
+                r="5"
+                fill="#649bbd"
+              />
+              <circle
+                cx="73"
+                cy="60"
+                r="5"
+                fill="#649bbd"
+              />
+              <circle
+                cx="29"
+                cy="91"
+                r="5"
+                fill="#649bbd"
+              />
+              <circle
+                cx="65"
+                cy="111"
+                r="5"
+                fill="#649bbd"
+              />
+              <path
+                d="M82 69L97 69"
+                stroke="#649bbd"
+                stroke-width="1.8"
+              />
+              <path
+                d="M92 65l5 4-5 4"
+                stroke="#649bbd"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M101 37h44l-13 28v27l-18 12V65z"
+                fill="#ede8f8"
+                stroke="#c9bcdf"
+              />
+              <text
+                x="123"
+                y="28"
+                fill="#617b8d"
+                font-size="9"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                Compress
+              </text>
+              <path
+                d="M145 71L165 71"
+                stroke="#649bbd"
+                stroke-width="1.8"
+              />
+              <path
+                d="M160 67l5 4-5 4"
+                stroke="#649bbd"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <rect
+                x="173"
+                y="31"
+                width="55"
+                height="79"
+                rx="7"
+                fill="#e4f2ee"
+              />
+              <rect
+                x="181"
+                y="41"
+                width="12"
+                height="7"
+                rx="3"
+                fill="#62aaa0"
+              />
+              <rect
+                x="181"
+                y="57"
+                width="21"
+                height="7"
+                rx="3"
+                fill="#62aaa0"
+              />
+              <rect
+                x="181"
+                y="73"
+                width="30"
+                height="7"
+                rx="3"
+                fill="#62aaa0"
+              />
+              <rect
+                x="181"
+                y="89"
+                width="12"
+                height="7"
+                rx="3"
+                fill="#62aaa0"
+              />
+              <text
+                x="44"
+                y="134"
+                fill="#617b8d"
+                font-size="9"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                GRAPH
+              </text>
+              <text
+                x="198"
+                y="132"
+                fill="#617b8d"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                FEATURES
+              </text>
+              <text
+                x="198"
+                y="144"
+                fill="#617b8d"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                + SEMANTICS
+              </text></svg
+            ><span>KDD <span class="figure-dot">·</span> 2024</span>
+          </div>
+          <div class="publication-body">
+            <h3>
+              Bridging and Compressing Feature and Semantic Spaces for Robust Graph
+              Neural Networks: An Information Theory Perspective
+            </h3>
+            <p class="authors">
+              Y. Zhong, R. Lin, <b>J. Li(李家印)</b>, S. Wang, et al
+            </p>
+            <p class="citation">
+              <i>ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)</i>,
+              pp.4571-4582, 2024-08. <b>(CCF A)</b>
+            </p>
+            <div
+              class="paper-links"
+              aria-label="论文官方链接"
+            >
+              <a
+                class="pill paper-download"
+                href="https://dl.acm.org/doi/10.1145/3637528.3671870"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="官方下载入口：Bridging and Compressing Feature and Semantic Spaces for Robust Graph Neural Networks: An Information Theory Perspective"
+                title="打开 ACM Digital Library 官方论文页面，按站点权限获取全文"
+                >官方下载 <span aria-hidden="true">↗</span></a
+              ><a
+                class="pill paper-pdf"
+                href="https://dl.acm.org/doi/pdf/10.1145/3637528.3671870"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="官方 PDF：Bridging and Compressing Feature and Semantic Spaces for Robust Graph Neural Networks: An Information Theory Perspective"
+                title="官方 PDF；可能需要登录或机构访问权限"
+                >PDF <span aria-hidden="true">↓</span></a
+              ><span class="publisher-name">ACM Digital Library</span>
+            </div>
+            <div class="tags">
+              <span>Graph Neural Networks</span><span>Information Theory</span>
+            </div>
+          </div>
+        </article>
+        <article class="publication">
+          <div class="publication-visual">
+            <svg
+              viewBox="0 0 240 154"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-labelledby="figure-title-5"
+            >
+              <title id="figure-title-5">
+                主题示意：根据社会网络交互关系预测潜在链接（非论文原图）
+              </title>
+              <path
+                d="M33 71L74 28"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <path
+                d="M33 71L81 116"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <path
+                d="M74 28L132 53"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <path
+                d="M81 116L132 53"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <path
+                d="M81 116L156 113"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <path
+                d="M132 53L156 113"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <path
+                d="M156 113L205 69"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <path
+                d="M132 53L205 69"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <circle
+                cx="33"
+                cy="71"
+                r="5"
+                fill="#62aaa0"
+              />
+              <circle
+                cx="74"
+                cy="28"
+                r="5"
+                fill="#62aaa0"
+              />
+              <circle
+                cx="81"
+                cy="116"
+                r="5"
+                fill="#62aaa0"
+              />
+              <circle
+                cx="132"
+                cy="53"
+                r="5"
+                fill="#62aaa0"
+              />
+              <circle
+                cx="156"
+                cy="113"
+                r="5"
+                fill="#62aaa0"
+              />
+              <circle
+                cx="205"
+                cy="69"
+                r="5"
+                fill="#62aaa0"
+              />
+              <path
+                d="M74 28L205 69"
+                stroke="#d4ae61"
+                stroke-width="1.8"
+                stroke-dasharray="5 4"
+              />
+              <circle
+                cx="74"
+                cy="28"
+                r="9"
+                fill="#649bbd"
+              />
+              <circle
+                cx="205"
+                cy="69"
+                r="9"
+                fill="#649bbd"
+              />
+              <rect
+                x="114"
+                y="13"
+                width="47"
+                height="21"
+                rx="7"
+                fill="#f8edcf"
+              />
+              <text
+                x="138"
+                y="28"
+                fill="#617b8d"
+                font-size="9"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                Predict
+              </text>
+              <text
+                x="118"
+                y="145"
+                fill="#617b8d"
+                font-size="9"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                SOCIAL LINK PREDICTION
+              </text></svg
+            ><span>计算机系统应用 <span class="figure-dot">·</span> 2024</span>
+          </div>
+          <div class="publication-body">
+            <h3>基于节点交互度的社会网络链路预测</h3>
+            <p class="authors">徐瑞阳, 徐振宇, <b>李家印*</b>等</p>
+            <p class="citation">
+              <i>计算机系统应用</i>, 2024-01. <b>(CCF C, Corresponding Author)</b>
+            </p>
+            <div
+              class="paper-links"
+              aria-label="论文官方链接"
+            >
+              <a
+                class="pill paper-download"
+                href="https://www.c-s-a.org.cn/csa/article/abstract/9430"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="官方下载入口：基于节点交互度的社会网络链路预测"
+                title="打开 计算机系统应用 官方论文页面，按站点权限获取全文"
+                >官方下载 <span aria-hidden="true">↗</span></a
+              ><a
+                class="pill paper-pdf"
+                href="https://www.c-s-a.org.cn/csa/article/pdf/9430"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="官方 PDF：基于节点交互度的社会网络链路预测"
+                title="官方 PDF；可能需要登录或机构访问权限"
+                >PDF <span aria-hidden="true">↓</span></a
+              ><span class="publisher-name">计算机系统应用</span>
+            </div>
+            <div class="tags">
+              <span>Social Networks</span><span>Link Prediction</span>
+            </div>
+          </div>
+        </article>
+        <article class="publication">
+          <div class="publication-visual">
+            <svg
+              viewBox="0 0 240 154"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-labelledby="figure-title-6"
+            >
+              <title id="figure-title-6">
+                主题示意：自动驾驶目标检测中的隐私保护与中毒识别（非论文原图）
+              </title>
+              <path
+                d="M55 132l45-112h47l44 112"
+                fill="#e8eef2"
+              />
+              <path
+                d="M121 22v15m0 13v16m0 15v17m0 15v18"
+                stroke="white"
+                stroke-width="3"
+              />
+              <g transform="translate(120 112) scale(1.1)">
+                <path
+                  d="M-16 0l5-10h21l6 10v10h-32z"
+                  fill="#649bbd"
+                />
+                <path
+                  d="M-8-7h15l3 7H-11z"
+                  fill="#e7f3f9"
+                />
+                <circle
+                  cx="-10"
+                  cy="10"
+                  r="4"
+                  fill="#68808e"
+                />
+                <circle
+                  cx="10"
+                  cy="10"
+                  r="4"
+                  fill="#68808e"
+                />
+                <path
+                  d="M-12 4h4m16 0h4"
+                  stroke="white"
+                  stroke-width="2"
+                />
+              </g>
+              <g transform="translate(107 46) scale(0.65)">
+                <path
+                  d="M-16 0l5-10h21l6 10v10h-32z"
+                  fill="#62aaa0"
+                />
+                <path
+                  d="M-8-7h15l3 7H-11z"
+                  fill="#e7f3f9"
+                />
+                <circle
+                  cx="-10"
+                  cy="10"
+                  r="4"
+                  fill="#68808e"
+                />
+                <circle
+                  cx="10"
+                  cy="10"
+                  r="4"
+                  fill="#68808e"
+                />
+                <path
+                  d="M-12 4h4m16 0h4"
+                  stroke="white"
+                  stroke-width="2"
+                />
+              </g>
+              <rect
+                x="90"
+                y="28"
+                width="35"
+                height="33"
+                rx="3"
+                stroke="#62aaa0"
+                stroke-width="1.8"
+              />
+              <rect
+                x="159"
+                y="28"
+                width="50"
+                height="40"
+                rx="7"
+                fill="#f8edcf"
+              />
+              <path
+                d="M184 35l15 24h-30z"
+                fill="#d57776"
+              />
+              <text
+                x="184"
+                y="55"
+                fill="white"
+                font-size="13"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                !
+              </text>
+              <text
+                x="185"
+                y="80"
+                fill="#617b8d"
+                font-size="9"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                Poison alert
+              </text>
+              <g transform="translate(43 50) scale(1.1)">
+                <path
+                  d="M-6 0v-5a6 6 0 0 1 12 0v5"
+                  stroke="#649bbd"
+                  stroke-width="2.5"
+                />
+                <rect
+                  x="-10"
+                  y="-1"
+                  width="20"
+                  height="16"
+                  rx="4"
+                  fill="#649bbd"
+                />
+                <circle
+                  cy="5"
+                  r="2"
+                  fill="white"
+                />
+                <path
+                  d="M0 5v5"
+                  stroke="white"
+                  stroke-width="1.5"
+                />
+              </g>
+              <path
+                d="M59 58L89 51"
+                stroke="#649bbd"
+                stroke-width="1.8"
+                stroke-dasharray="3 3"
+              />
+              <path
+                d="M94 89q26-26 52 0m-44-7q18-18 36 0"
+                stroke="#649bbd"
+                stroke-width="1.5"
+              />
+              <text
+                x="47"
+                y="82"
+                fill="#617b8d"
+                font-size="9"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                Private
+              </text></svg
+            ><span>TNSE <span class="figure-dot">·</span> 2023</span>
+          </div>
+          <div class="publication-body">
+            <h3>
+              Privacy-Preserving Object Detection With Poisoning Recognition for
+              Autonomous Vehicles
+            </h3>
+            <p class="authors"><b>J. Li(李家印)</b>, W. Guo, L. Xie, X. Liu, et al</p>
+            <p class="citation">
+              <i>IEEE Transactions on Network Science and Engineering (TNSE)</i>, 10(3),
+              pp.1487-1500, 2023. <b>(SCI2)</b>
+            </p>
+            <div
+              class="paper-links"
+              aria-label="论文官方链接"
+            >
+              <a
+                class="pill paper-download"
+                href="https://ieeexplore.ieee.org/document/9971772/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="官方下载入口：Privacy-Preserving Object Detection With Poisoning Recognition for Autonomous Vehicles"
+                title="打开 IEEE Xplore 官方论文页面，按站点权限获取全文"
+                >官方下载 <span aria-hidden="true">↗</span></a
+              ><span class="publisher-name">IEEE Xplore</span>
+            </div>
+            <div class="tags">
+              <span>Autonomous Vehicles</span><span>Privacy Protection</span>
+            </div>
+          </div>
+        </article>
+        <article class="publication">
+          <div class="publication-visual">
+            <svg
+              viewBox="0 0 240 154"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-labelledby="figure-title-7"
+            >
+              <title id="figure-title-7">
+                主题示意：城市交通压缩感知与隐私保护实时监测（非论文原图）
+              </title>
+              <rect
+                x="14"
+                y="47"
+                width="19"
+                height="42"
+                rx="7"
+                fill="#e1eef6"
+              />
+              <rect
+                x="36"
+                y="26"
+                width="20"
+                height="63"
+                rx="7"
+                fill="#e1eef6"
+              />
+              <rect
+                x="59"
+                y="39"
+                width="20"
+                height="50"
+                rx="7"
+                fill="#e1eef6"
+              />
+              <rect
+                x="20"
+                y="51"
+                width="5"
+                height="5"
+                rx="1"
+                fill="#91b7ce"
+              />
+              <rect
+                x="20"
+                y="62"
+                width="5"
+                height="5"
+                rx="1"
+                fill="#91b7ce"
+              />
+              <rect
+                x="20"
+                y="73"
+                width="5"
+                height="5"
+                rx="1"
+                fill="#91b7ce"
+              />
+              <rect
+                x="42"
+                y="51"
+                width="5"
+                height="5"
+                rx="1"
+                fill="#91b7ce"
+              />
+              <rect
+                x="42"
+                y="62"
+                width="5"
+                height="5"
+                rx="1"
+                fill="#91b7ce"
+              />
+              <rect
+                x="42"
+                y="73"
+                width="5"
+                height="5"
+                rx="1"
+                fill="#91b7ce"
+              />
+              <rect
+                x="65"
+                y="51"
+                width="5"
+                height="5"
+                rx="1"
+                fill="#91b7ce"
+              />
+              <rect
+                x="65"
+                y="62"
+                width="5"
+                height="5"
+                rx="1"
+                fill="#91b7ce"
+              />
+              <rect
+                x="65"
+                y="73"
+                width="5"
+                height="5"
+                rx="1"
+                fill="#91b7ce"
+              />
+              <path
+                d="M11 100L84 100"
+                stroke="#acbdc8"
+                stroke-width="1.8"
+              />
+              <g transform="translate(47 100) scale(0.6)">
+                <path
+                  d="M-16 0l5-10h21l6 10v10h-32z"
+                  fill="#62aaa0"
+                />
+                <path
+                  d="M-8-7h15l3 7H-11z"
+                  fill="#e7f3f9"
+                />
+                <circle
+                  cx="-10"
+                  cy="10"
+                  r="4"
+                  fill="#68808e"
+                />
+                <circle
+                  cx="10"
+                  cy="10"
+                  r="4"
+                  fill="#68808e"
+                />
+                <path
+                  d="M-12 4h4m16 0h4"
+                  stroke="white"
+                  stroke-width="2"
+                />
+              </g>
+              <path
+                d="M85 68L102 68"
+                stroke="#649bbd"
+                stroke-width="1.8"
+              />
+              <path
+                d="M97 64l5 4-5 4"
+                stroke="#649bbd"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <g transform="translate(117 57) scale(0.85)">
+                <path
+                  d="M-6 0v-5a6 6 0 0 1 12 0v5"
+                  stroke="#d4ae61"
+                  stroke-width="2.5"
+                />
+                <rect
+                  x="-10"
+                  y="-1"
+                  width="20"
+                  height="16"
+                  rx="4"
+                  fill="#d4ae61"
+                />
+                <circle
+                  cy="5"
+                  r="2"
+                  fill="white"
+                />
+                <path
+                  d="M0 5v5"
+                  stroke="white"
+                  stroke-width="1.5"
+                />
+              </g>
+              <rect
+                x="103"
+                y="83"
+                width="5"
+                height="5"
+                rx="1"
+                fill="#d4ae61"
+              />
+              <rect
+                x="110"
+                y="83"
+                width="5"
+                height="5"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="117"
+                y="83"
+                width="5"
+                height="5"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="124"
+                y="83"
+                width="5"
+                height="5"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="103"
+                y="90"
+                width="5"
+                height="5"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="110"
+                y="90"
+                width="5"
+                height="5"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="117"
+                y="90"
+                width="5"
+                height="5"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="124"
+                y="90"
+                width="5"
+                height="5"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="103"
+                y="97"
+                width="5"
+                height="5"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="110"
+                y="97"
+                width="5"
+                height="5"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="117"
+                y="97"
+                width="5"
+                height="5"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="124"
+                y="97"
+                width="5"
+                height="5"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <path
+                d="M137 68L157 68"
+                stroke="#649bbd"
+                stroke-width="1.8"
+              />
+              <path
+                d="M152 64l5 4-5 4"
+                stroke="#649bbd"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <rect
+                x="162"
+                y="32"
+                width="65"
+                height="63"
+                rx="7"
+                fill="#e1eef6"
+              />
+              <rect
+                x="168"
+                y="39"
+                width="53"
+                height="40"
+                rx="3"
+                fill="#fff"
+              />
+              <path
+                d="M173 68l8-9 8 5 8-15 8 5 10-8"
+                stroke="#62aaa0"
+                stroke-width="2"
+              />
+              <path
+                d="M195 96L195 105"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <path
+                d="M181 105L209 105"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <text
+                x="45"
+                y="130"
+                fill="#617b8d"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                CITY SENSING
+              </text>
+              <text
+                x="196"
+                y="129"
+                fill="#617b8d"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                LIVE MONITOR
+              </text></svg
+            ><span>TVT <span class="figure-dot">·</span> 2020</span>
+          </div>
+          <div class="publication-body">
+            <h3>
+              Privacy-Preserving Compressive Sensing for Real-Time Traffic Monitoring in
+              Urban City
+            </h3>
+            <p class="authors">W. Guo, <b>J. Li*(李家印)</b>, X. Liu, Y. Yang</p>
+            <p class="citation">
+              <i>IEEE Transactions on Vehicular Technology (TVT)</i>, 69(12),
+              pp.14510-14522, 2020. <b>(SCI2, Corresponding Author)</b>
+            </p>
+            <div
+              class="paper-links"
+              aria-label="论文官方链接"
+            >
+              <a
+                class="pill paper-download"
+                href="https://ieeexplore.ieee.org/document/9286682/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="官方下载入口：Privacy-Preserving Compressive Sensing for Real-Time Traffic Monitoring in Urban City"
+                title="打开 IEEE Xplore 官方论文页面，按站点权限获取全文"
+                >官方下载 <span aria-hidden="true">↗</span></a
+              ><span class="publisher-name">IEEE Xplore</span>
+            </div>
+            <div class="tags">
+              <span>Traffic Monitoring</span><span>Compressive Sensing</span>
+            </div>
+          </div>
+        </article>
+        <article class="publication">
+          <div class="publication-visual">
+            <svg
+              viewBox="0 0 240 154"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-labelledby="figure-title-8"
+            >
+              <title id="figure-title-8">
+                主题示意：隐私保护的道路状态报告与监测（非论文原图）
+              </title>
+              <path
+                d="M13 61h213v39H13z"
+                fill="#e6ecef"
+              />
+              <path
+                d="M15 80h209"
+                stroke="white"
+                stroke-width="2"
+                stroke-dasharray="12 8"
+              />
+              <g transform="translate(49 62) scale(0.68)">
+                <path
+                  d="M-16 0l5-10h21l6 10v10h-32z"
+                  fill="#649bbd"
+                />
+                <path
+                  d="M-8-7h15l3 7H-11z"
+                  fill="#e7f3f9"
+                />
+                <circle
+                  cx="-10"
+                  cy="10"
+                  r="4"
+                  fill="#68808e"
+                />
+                <circle
+                  cx="10"
+                  cy="10"
+                  r="4"
+                  fill="#68808e"
+                />
+                <path
+                  d="M-12 4h4m16 0h4"
+                  stroke="white"
+                  stroke-width="2"
+                />
+              </g>
+              <g transform="translate(108 100) scale(0.68)">
+                <path
+                  d="M-16 0l5-10h21l6 10v10h-32z"
+                  fill="#62aaa0"
+                />
+                <path
+                  d="M-8-7h15l3 7H-11z"
+                  fill="#e7f3f9"
+                />
+                <circle
+                  cx="-10"
+                  cy="10"
+                  r="4"
+                  fill="#68808e"
+                />
+                <circle
+                  cx="10"
+                  cy="10"
+                  r="4"
+                  fill="#68808e"
+                />
+                <path
+                  d="M-12 4h4m16 0h4"
+                  stroke="white"
+                  stroke-width="2"
+                />
+              </g>
+              <g transform="translate(183 62) scale(0.68)">
+                <path
+                  d="M-16 0l5-10h21l6 10v10h-32z"
+                  fill="#d4ae61"
+                />
+                <path
+                  d="M-8-7h15l3 7H-11z"
+                  fill="#e7f3f9"
+                />
+                <circle
+                  cx="-10"
+                  cy="10"
+                  r="4"
+                  fill="#68808e"
+                />
+                <circle
+                  cx="10"
+                  cy="10"
+                  r="4"
+                  fill="#68808e"
+                />
+                <path
+                  d="M-12 4h4m16 0h4"
+                  stroke="white"
+                  stroke-width="2"
+                />
+              </g>
+              <path
+                d="M49 56L120 25"
+                stroke="#649bbd"
+                stroke-width="1.8"
+                stroke-dasharray="3 4"
+              />
+              <path
+                d="M108 101L120 25"
+                stroke="#649bbd"
+                stroke-width="1.8"
+                stroke-dasharray="3 4"
+              />
+              <path
+                d="M183 56L120 25"
+                stroke="#649bbd"
+                stroke-width="1.8"
+                stroke-dasharray="3 4"
+              />
+              <rect
+                x="97"
+                y="9"
+                width="46"
+                height="31"
+                rx="7"
+                fill="#e4f2ee"
+              />
+              <g transform="translate(120 20) scale(0.65)">
+                <path
+                  d="M-6 0v-5a6 6 0 0 1 12 0v5"
+                  stroke="#62aaa0"
+                  stroke-width="2.5"
+                />
+                <rect
+                  x="-10"
+                  y="-1"
+                  width="20"
+                  height="16"
+                  rx="4"
+                  fill="#62aaa0"
+                />
+                <circle
+                  cy="5"
+                  r="2"
+                  fill="white"
+                />
+                <path
+                  d="M0 5v5"
+                  stroke="white"
+                  stroke-width="1.5"
+                />
+              </g>
+              <rect
+                x="61"
+                y="119"
+                width="34"
+                height="9"
+                rx="4"
+                fill="#62aaa0"
+              />
+              <rect
+                x="101"
+                y="119"
+                width="34"
+                height="9"
+                rx="4"
+                fill="#d4ae61"
+              />
+              <rect
+                x="141"
+                y="119"
+                width="34"
+                height="9"
+                rx="4"
+                fill="#d57776"
+              />
+              <text
+                x="120"
+                y="146"
+                fill="#617b8d"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                PRIVATE ROAD-STATE REPORTS
+              </text></svg
+            ><span>通信学报 <span class="figure-dot">·</span> 2020</span>
+          </div>
+          <div class="publication-body">
+            <h3>基于智能交通的隐私保护道路状态实时监测方案</h3>
+            <p class="authors"><b>李家印</b>, 郭文忠, 李小燕等</p>
+            <p class="citation">
+              <i>通信学报</i>, 41(7), pp.73-84, 2020-11. <b>(CCF B)</b>
+            </p>
+            <div
+              class="paper-links"
+              aria-label="论文官方链接"
+            >
+              <a
+                class="pill paper-download"
+                href="https://www.joconline.com.cn/zh/article/doi/10.11959/j.issn.1000-436x.2020110/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="官方下载入口：基于智能交通的隐私保护道路状态实时监测方案"
+                title="打开 通信学报 官方论文页面，按站点权限获取全文"
+                >官方下载 <span aria-hidden="true">↗</span></a
+              ><a
+                class="pill paper-pdf"
+                href="https://www.joconline.com.cn/rc-pub/front/front-article/download/59736572/lowqualitypdf/%E5%9F%BA%E4%BA%8E%E6%99%BA%E8%83%BD%E4%BA%A4%E9%80%9A%E7%9A%84%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4%E9%81%93%E8%B7%AF%E7%8A%B6%E6%80%81%E5%AE%9E%E6%97%B6%E7%9B%91%E6%B5%8B%E6%96%B9%E6%A1%88.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="官方 PDF：基于智能交通的隐私保护道路状态实时监测方案"
+                title="官方 PDF；可能需要登录或机构访问权限"
+                >PDF <span aria-hidden="true">↓</span></a
+              ><span class="publisher-name">通信学报</span>
+            </div>
+            <div class="tags">
+              <span>Traffic Monitoring</span><span>Privacy Protection</span>
+            </div>
+          </div>
+        </article>
+        <article class="publication">
+          <div class="publication-visual">
+            <svg
+              viewBox="0 0 240 154"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-labelledby="figure-title-9"
+            >
+              <title id="figure-title-9">
+                主题示意：通过压缩感知测量估计交通流（非论文原图）
+              </title>
+              <rect
+                x="12"
+                y="36"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#649bbd"
+              />
+              <rect
+                x="20"
+                y="36"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="28"
+                y="36"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="36"
+                y="36"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="44"
+                y="36"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="52"
+                y="36"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="12"
+                y="44"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="20"
+                y="44"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="28"
+                y="44"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="36"
+                y="44"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="44"
+                y="44"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="52"
+                y="44"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="12"
+                y="52"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="20"
+                y="52"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="28"
+                y="52"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="36"
+                y="52"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#649bbd"
+              />
+              <rect
+                x="44"
+                y="52"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="52"
+                y="52"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="12"
+                y="60"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="20"
+                y="60"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="28"
+                y="60"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="36"
+                y="60"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="44"
+                y="60"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="52"
+                y="60"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="12"
+                y="68"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="20"
+                y="68"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="28"
+                y="68"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="36"
+                y="68"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="44"
+                y="68"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="52"
+                y="68"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="12"
+                y="76"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#649bbd"
+              />
+              <rect
+                x="20"
+                y="76"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="28"
+                y="76"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="36"
+                y="76"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="44"
+                y="76"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="52"
+                y="76"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <text
+                x="34"
+                y="110"
+                fill="#617b8d"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                Sparse flow
+              </text>
+              <path
+                d="M63 65L81 65"
+                stroke="#649bbd"
+                stroke-width="1.8"
+              />
+              <path
+                d="M76 61l5 4-5 4"
+                stroke="#649bbd"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <rect
+                x="87"
+                y="49"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#d4ae61"
+              />
+              <rect
+                x="95"
+                y="49"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="103"
+                y="49"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="111"
+                y="49"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#d4ae61"
+              />
+              <rect
+                x="119"
+                y="49"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="87"
+                y="57"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="95"
+                y="57"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#d4ae61"
+              />
+              <rect
+                x="103"
+                y="57"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="111"
+                y="57"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="119"
+                y="57"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#d4ae61"
+              />
+              <rect
+                x="87"
+                y="65"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="95"
+                y="65"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="103"
+                y="65"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#d4ae61"
+              />
+              <rect
+                x="111"
+                y="65"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="119"
+                y="65"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <text
+                x="105"
+                y="110"
+                fill="#617b8d"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                Sensing
+              </text>
+              <path
+                d="M129 65L149 65"
+                stroke="#649bbd"
+                stroke-width="1.8"
+              />
+              <path
+                d="M144 61l5 4-5 4"
+                stroke="#649bbd"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <rect
+                x="156"
+                y="31"
+                width="71"
+                height="73"
+                rx="7"
+                fill="#e4f2ee"
+              />
+              <path
+                d="M164 94L219 94"
+                stroke="#bbccd7"
+                stroke-width="1.8"
+              />
+              <rect
+                x="167"
+                y="73"
+                width="6"
+                height="19"
+                rx="2"
+                fill="#62aaa0"
+              />
+              <rect
+                x="177"
+                y="57"
+                width="6"
+                height="35"
+                rx="2"
+                fill="#62aaa0"
+              />
+              <rect
+                x="187"
+                y="67"
+                width="6"
+                height="25"
+                rx="2"
+                fill="#62aaa0"
+              />
+              <rect
+                x="197"
+                y="45"
+                width="6"
+                height="47"
+                rx="2"
+                fill="#62aaa0"
+              />
+              <rect
+                x="207"
+                y="54"
+                width="6"
+                height="38"
+                rx="2"
+                fill="#62aaa0"
+              />
+              <text
+                x="192"
+                y="121"
+                fill="#617b8d"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                ESTIMATED
+              </text>
+              <text
+                x="192"
+                y="134"
+                fill="#617b8d"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                TRAFFIC
+              </text></svg
+            ><span>GlobeCom <span class="figure-dot">·</span> 2019</span>
+          </div>
+          <div class="publication-body">
+            <h3>Privacy-Preserving Compressive Sensing for Traffic Estimation</h3>
+            <p class="authors"><b>J. Li(李家印)</b>, W. Guo, Z. Ma, X. Meng, et al</p>
+            <p class="citation">
+              <i>IEEE Global Communications Conference (GlobeCom)</i>, 2019-12.
+              <b>(CCF C)</b>
+            </p>
+            <div
+              class="paper-links"
+              aria-label="论文官方链接"
+            >
+              <a
+                class="pill paper-download"
+                href="https://ieeexplore.ieee.org/document/9013109/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="官方下载入口：Privacy-Preserving Compressive Sensing for Traffic Estimation"
+                title="打开 IEEE Xplore 官方论文页面，按站点权限获取全文"
+                >官方下载 <span aria-hidden="true">↗</span></a
+              ><span class="publisher-name">IEEE Xplore</span>
+            </div>
+            <div class="tags">
+              <span>Traffic Estimation</span><span>Compressive Sensing</span>
+            </div>
+          </div>
+        </article>
+        <article class="publication">
+          <div class="publication-visual">
+            <svg
+              viewBox="0 0 240 154"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-labelledby="figure-title-10"
+            >
+              <title id="figure-title-10">
+                主题示意：道路网络采样与交通状态重建（非论文原图）
+              </title>
+              <path
+                d="M19 23v94m43-94v94m44-94v94M19 26h88M19 70h88M19 113h88"
+                stroke="#d2dee5"
+                stroke-width="7"
+              />
+              <path
+                d="M19 113V70h43V26h44"
+                stroke="#649bbd"
+                stroke-width="3"
+              />
+              <circle
+                cx="19"
+                cy="70"
+                r="5"
+                fill="#d4ae61"
+              />
+              <circle
+                cx="62"
+                cy="26"
+                r="5"
+                fill="#d4ae61"
+              />
+              <circle
+                cx="106"
+                cy="113"
+                r="5"
+                fill="#d4ae61"
+              />
+              <text
+                x="60"
+                y="140"
+                fill="#617b8d"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                ROAD NETWORK
+              </text>
+              <path
+                d="M115 70L138 70"
+                stroke="#649bbd"
+                stroke-width="1.8"
+              />
+              <path
+                d="M133 66l5 4-5 4"
+                stroke="#649bbd"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <rect
+                x="145"
+                y="28"
+                width="81"
+                height="81"
+                rx="7"
+                fill="#e1eef6"
+              />
+              <rect
+                x="154"
+                y="37"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#649bbd"
+              />
+              <rect
+                x="162"
+                y="37"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="170"
+                y="37"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="178"
+                y="37"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="186"
+                y="37"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="194"
+                y="37"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="154"
+                y="45"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="162"
+                y="45"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="170"
+                y="45"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="178"
+                y="45"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="186"
+                y="45"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#ccdde7"
+              />
+              <rect
+                x="194"
+                y="45"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="154"
+                y="53"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="162"
+                y="53"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="170"
+                y="53"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="178"
+                y="53"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#649bbd"
+              />
+              <rect
+                x="186"
+                y="53"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <rect
+                x="194"
+                y="53"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#edf1f4"
+              />
+              <path
+                d="M154 96l10-12 10 5 11-17 10 8 10-7 12 9"
+                stroke="#649bbd"
+                stroke-width="2"
+              />
+              <text
+                x="185"
+                y="127"
+                fill="#617b8d"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                SAMPLE +
+              </text>
+              <text
+                x="185"
+                y="140"
+                fill="#617b8d"
+                font-size="8"
+                text-anchor="middle"
+                font-family="Arial, sans-serif"
+              >
+                RECONSTRUCT
+              </text></svg
+            ><span>WCSP <span class="figure-dot">·</span> 2017</span>
+          </div>
+          <div class="publication-body">
+            <h3>Traffic Estimation in Road Networks via Compressive Sensing</h3>
+            <p class="authors">
+              <b>J. Li(李家印)</b>, H. Zheng, X. Feng, Z. Chen, et al
+            </p>
+            <p class="citation">
+              <i
+                >IEEE International Conference on Wireless Communications and Signal
+                Processing (WCSP)</i
+              >, 2017-10. <b>(EI)</b>
+            </p>
+            <div
+              class="paper-links"
+              aria-label="论文官方链接"
+            >
+              <a
+                class="pill paper-download"
+                href="https://ieeexplore.ieee.org/document/8171137/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="官方下载入口：Traffic Estimation in Road Networks via Compressive Sensing"
+                title="打开 IEEE Xplore 官方论文页面，按站点权限获取全文"
+                >官方下载 <span aria-hidden="true">↗</span></a
+              ><span class="publisher-name">IEEE Xplore</span>
+            </div>
+            <div class="tags">
+              <span>Road Networks</span><span>Compressive Sensing</span>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section
+        class="card detail-card"
+        id="license"
+        aria-labelledby="license-heading"
+      >
+        <h2 id="license-heading">Patents</h2>
+        <ol class="numbered-list">
+          <li>
+            一种基于Bert的工控协议模糊测试用例筛选方法及系统, 专利号：ZL202310652941.2
+          </li>
+          <li>
+            基于深度卷积神经网络的云中保护外包数据隐私保护系统, 专利号: ZL201910653448.6
+          </li>
+          <li>
+            基于城市交通的隐私保护压缩感知实时交通监测方法, 专利号：ZL202010649250.3
+          </li>
+          <li>
+            一种实用性云端隐私保护外包计算系统及其计算方法, 专利号：ZL201910723361.1
+          </li>
+          <li>
+            一种基于车辆数据隐私保护与压缩感知的交通估计方法, 专利号：ZL201811551841.6
+          </li>
+        </ol>
+      </section>
+      <section
+        class="card detail-card"
+        id="projects"
+        aria-labelledby="projects-heading"
+      >
+        <h2 id="projects-heading">Projects</h2>
+        <ol class="numbered-list">
+          <li>
+            人工智能数据安全关键技术研究&lt;福建省重大专项子项目, No.2025YZ040003&gt;,
+            2025-2028, 副组长
+          </li>
+          <li>
+            交通网络数据的层次化隐私保护研究&lt;福建省青年基金项目, No.2023J05128&gt;,
+            2023-2026, 主持
+          </li>
+          <li>
+            面向自动驾驶汽车具有中毒防御机制隐私保护方法&lt;福州大学开放课题项目&gt;,
+            2022-2023, 主持
+          </li>
+        </ol>
+      </section>
+    </main>
     <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="#">Jiayin Li</a>
-                <a href="#">Jiayin Li</a>
-            </div>
-            <div class="footer-copyright">
-                © 2025 Jiayin Li. Published with GitHub Pages, powered by Jekyll, based on the Minimal Mistakes theme. Source code for this website can be found here.
-            </div>
-        </div>
+      © 2025 Jiayin Li.
+      <a href="mailto:lijiayin2019@gmail.com">lijiayin2019@gmail.com</a><br />College of
+      Computer Science and Cyber Security · Fujian Normal University
     </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"7939e04a4baf43c8b86a560f74aac60e","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-</body>
+  </body>
 </html>
