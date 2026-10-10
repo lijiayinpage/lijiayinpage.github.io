@@ -1,0 +1,1025 @@
+[
+  {
+    "doi": "10.1145/3770855.3817740",
+    "title": "Silencing the Poison: An Unsupervised Granular Ball Defense Approach in Local Smoothing Context for Recommender Systems",
+    "authors": [
+      {
+        "name": "Yunmeng Zhao",
+        "self": false
+      },
+      {
+        "name": "Jun Shen",
+        "self": false
+      },
+      {
+        "name": "Shenbao Yu",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      },
+      {
+        "name": "Jiayin Lin",
+        "self": false
+      }
+    ],
+    "venue": "Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2",
+    "date": "2026-08-09",
+    "year": 2026,
+    "type": "proceedings-article",
+    "issns": [],
+    "volume": "",
+    "issue": "",
+    "pages": "6760-6771",
+    "publisher": "ACM",
+    "url": "https://doi.org/10.1145/3770855.3817740",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "会议等级符合，但尚缺 Full/Regular paper 类型证据"
+    }
+  },
+  {
+    "doi": "10.1109/tdsc.2025.3636511",
+    "title": "Cobweb Privacy: A Novel Mechanism for Comprehensive Association Privacy Protection in Data Aggregation",
+    "authors": [
+      {
+        "name": "Yanzi Li",
+        "self": false
+      },
+      {
+        "name": "Li Xu",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      },
+      {
+        "name": "He Fang",
+        "self": false
+      },
+      {
+        "name": "Shui Yu",
+        "self": false
+      }
+    ],
+    "venue": "IEEE Transactions on Dependable and Secure Computing",
+    "date": "2026-03",
+    "year": 2026,
+    "type": "journal-article",
+    "issns": [
+      "1545-5971",
+      "1941-0018",
+      "2160-9209"
+    ],
+    "volume": "23",
+    "issue": "2",
+    "pages": "3408-3422",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "url": "https://doi.org/10.1109/tdsc.2025.3636511",
+    "qualification": {
+      "eligible": true,
+      "status": "eligible",
+      "evidence": [
+        {
+          "system": "CCF",
+          "grade": "A",
+          "edition": 2026,
+          "publicationYear": 2026,
+          "label": "CCF A · 2026版（发表年 2026）",
+          "source": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F#page=17"
+        }
+      ]
+    }
+  },
+  {
+    "doi": "10.1016/j.knosys.2025.114930",
+    "title": "Pseudo knowledge driven and lightweight reverse distillation for multimodal anomaly detection",
+    "authors": [
+      {
+        "name": "Wenye Cai",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      },
+      {
+        "name": "Li Xu",
+        "self": false
+      },
+      {
+        "name": "Renjie Lin",
+        "self": false
+      }
+    ],
+    "venue": "Knowledge-Based Systems",
+    "date": "2026-01",
+    "year": 2026,
+    "type": "journal-article",
+    "issns": [
+      "0950-7051"
+    ],
+    "volume": "333",
+    "issue": "",
+    "pages": "114930",
+    "publisher": "Elsevier BV",
+    "url": "https://doi.org/10.1016/j.knosys.2025.114930",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "尚无发表当年 LetPub 中科院大类 1/2 区或适用 CCF A/B 证据"
+    }
+  },
+  {
+    "doi": "10.1109/tdsc.2025.3606413",
+    "title": "Verifiable and Lightweight Multi-Round Secure Federated Learning",
+    "authors": [
+      {
+        "name": "Jiayin Li",
+        "self": true
+      },
+      {
+        "name": "Shengmin Xu",
+        "self": false
+      },
+      {
+        "name": "Xingshuo Han",
+        "self": false
+      },
+      {
+        "name": "Jianting Ning",
+        "self": false
+      },
+      {
+        "name": "Xinlei He",
+        "self": false
+      },
+      {
+        "name": "Guowen Xu",
+        "self": false
+      }
+    ],
+    "venue": "IEEE Transactions on Dependable and Secure Computing",
+    "date": "2026-01",
+    "year": 2026,
+    "type": "journal-article",
+    "issns": [
+      "1545-5971",
+      "1941-0018",
+      "2160-9209"
+    ],
+    "volume": "23",
+    "issue": "1",
+    "pages": "403-416",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "url": "https://doi.org/10.1109/tdsc.2025.3606413",
+    "qualification": {
+      "eligible": true,
+      "status": "eligible",
+      "evidence": [
+        {
+          "system": "CCF",
+          "grade": "A",
+          "edition": 2026,
+          "publicationYear": 2026,
+          "label": "CCF A · 2026版（发表年 2026）",
+          "source": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F#page=17"
+        }
+      ]
+    }
+  },
+  {
+    "doi": "10.1007/978-981-95-3055-7_22",
+    "title": "FusionMIA: Enhancing Membership Inference Attacks with Spy Clients and Shadow Models in Federated Learning",
+    "authors": [
+      {
+        "name": "Xiang Lan",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      },
+      {
+        "name": "Zuobin Ying",
+        "self": false
+      },
+      {
+        "name": "Xingshuo Han",
+        "self": false
+      },
+      {
+        "name": "Shengmin Xu",
+        "self": false
+      }
+    ],
+    "venue": "Knowledge Science, Engineering and Management",
+    "date": "2026",
+    "year": 2026,
+    "type": "book-chapter",
+    "issns": [
+      "0302-9743",
+      "1611-3349"
+    ],
+    "volume": "",
+    "issue": "",
+    "pages": "279-293",
+    "publisher": "Springer Nature Singapore",
+    "url": "https://doi.org/10.1007/978-981-95-3055-7_22",
+    "qualification": {
+      "eligible": false,
+      "status": "rejected",
+      "evidence": [],
+      "reason": "尚无适用 CCF A/B 正式会议论文证据"
+    }
+  },
+  {
+    "doi": "10.1109/tnse.2026.3727620",
+    "title": "Data Poisoning Detection for Secure Federated Learning With Dropout-Resilient Aggregation",
+    "authors": [
+      {
+        "name": "Jiayin Li",
+        "self": true
+      },
+      {
+        "name": "Shengmin Xu",
+        "self": false
+      },
+      {
+        "name": "Xingshuo Han",
+        "self": false
+      },
+      {
+        "name": "Xinlei He",
+        "self": false
+      }
+    ],
+    "venue": "IEEE Transactions on Network Science and Engineering",
+    "date": "2026",
+    "year": 2026,
+    "type": "journal-article",
+    "issns": [
+      "2327-4697"
+    ],
+    "volume": "13",
+    "issue": "",
+    "pages": "11255-11265",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "url": "https://doi.org/10.1109/tnse.2026.3727620",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "尚无发表当年 LetPub 中科院大类 1/2 区或适用 CCF A/B 证据"
+    }
+  },
+  {
+    "doi": "10.1145/3627673.3679896",
+    "title": "Distilling Knowledge Based on Curriculum Learning for Temporal Knowledge Graph Embeddings",
+    "authors": [
+      {
+        "name": "Bin Zhang",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      },
+      {
+        "name": "Yuanfei Dai",
+        "self": false
+      }
+    ],
+    "venue": "Proceedings of the 33rd ACM International Conference on Information and Knowledge Management",
+    "date": "2024-10-21",
+    "year": 2024,
+    "type": "proceedings-article",
+    "issns": [],
+    "volume": "",
+    "issue": "",
+    "pages": "4248-4252",
+    "publisher": "ACM",
+    "url": "https://doi.org/10.1145/3627673.3679896",
+    "qualification": {
+      "eligible": false,
+      "status": "rejected",
+      "evidence": [],
+      "reason": "会议论文属于短文、Demo、Workshop 等非正式长文"
+    }
+  },
+  {
+    "doi": "10.1145/3637528.3671870",
+    "title": "Bridging and Compressing Feature and Semantic Spaces for Robust Graph Neural Networks: An Information Theory Perspective",
+    "authors": [
+      {
+        "name": "Luying Zhong",
+        "self": false
+      },
+      {
+        "name": "Renjie Lin",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      },
+      {
+        "name": "Shiping Wang",
+        "self": false
+      },
+      {
+        "name": "Zheyi Chen",
+        "self": false
+      }
+    ],
+    "venue": "Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+    "date": "2024-08-25",
+    "year": 2024,
+    "type": "proceedings-article",
+    "issns": [],
+    "volume": "",
+    "issue": "",
+    "pages": "4571-4582",
+    "publisher": "ACM",
+    "url": "https://doi.org/10.1145/3637528.3671870",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "会议等级符合，但尚缺 Full/Regular paper 类型证据"
+    }
+  },
+  {
+    "doi": "10.1109/tdsc.2023.3253520",
+    "title": "Differentially Private Non-Negative Consistent Release for Large-Scale Hierarchical Trees",
+    "authors": [
+      {
+        "name": "Jianping Cai",
+        "self": false
+      },
+      {
+        "name": "Ximeng Liu",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      },
+      {
+        "name": "Kim-Kwang Raymond Choo",
+        "self": false
+      }
+    ],
+    "venue": "IEEE Transactions on Dependable and Secure Computing",
+    "date": "2024-01",
+    "year": 2024,
+    "type": "journal-article",
+    "issns": [
+      "1545-5971",
+      "1941-0018",
+      "2160-9209"
+    ],
+    "volume": "21",
+    "issue": "1",
+    "pages": "388-402",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "url": "https://doi.org/10.1109/tdsc.2023.3253520",
+    "qualification": {
+      "eligible": true,
+      "status": "eligible",
+      "evidence": [
+        {
+          "system": "CCF",
+          "grade": "A",
+          "edition": 2022,
+          "publicationYear": 2024,
+          "label": "CCF A · 2022版（发表年 2024）",
+          "source": "https://shuhaoliu.github.io/assets/sharing/ccf-2022.pdf#page=17"
+        }
+      ]
+    }
+  },
+  {
+    "doi": "10.1145/3638782.3638789",
+    "title": "A Module Placement Method for Digital Microfluidic Biochips Based on Security Design",
+    "authors": [
+      {
+        "name": "Zhongliao Yang",
+        "self": false
+      },
+      {
+        "name": "Yinan Yao",
+        "self": false
+      },
+      {
+        "name": "Xiaodong Guo",
+        "self": false
+      },
+      {
+        "name": "Peixin Huang",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      },
+      {
+        "name": "Yuzhong Chen",
+        "self": false
+      },
+      {
+        "name": "Xintian Liang",
+        "self": false
+      }
+    ],
+    "venue": "Proceedings of the 2023 13th International Conference on Communication and Network Security",
+    "date": "2023-12-06",
+    "year": 2023,
+    "type": "proceedings-article",
+    "issns": [],
+    "volume": "",
+    "issue": "",
+    "pages": "40-45",
+    "publisher": "ACM",
+    "url": "https://doi.org/10.1145/3638782.3638789",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "尚无适用 CCF A/B 正式会议论文证据"
+    }
+  },
+  {
+    "doi": "10.1145/3638782.3638798",
+    "title": "Blockchain-based Searchable Encryption Scheme for Spatial Text Data",
+    "authors": [
+      {
+        "name": "Zhirun Lin",
+        "self": false
+      },
+      {
+        "name": "Yang Yang",
+        "self": false
+      },
+      {
+        "name": "Yonghua Zhan",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      },
+      {
+        "name": "Chen Dong",
+        "self": false
+      }
+    ],
+    "venue": "Proceedings of the 2023 13th International Conference on Communication and Network Security",
+    "date": "2023-12-06",
+    "year": 2023,
+    "type": "proceedings-article",
+    "issns": [],
+    "volume": "",
+    "issue": "",
+    "pages": "100-105",
+    "publisher": "ACM",
+    "url": "https://doi.org/10.1145/3638782.3638798",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "尚无适用 CCF A/B 正式会议论文证据"
+    }
+  },
+  {
+    "doi": "10.1145/3638782.3638803",
+    "title": "Improved Meet-in-the-Middle Cryptanalysis on Kupyna",
+    "authors": [
+      {
+        "name": "Jinxing Xu",
+        "self": false
+      },
+      {
+        "name": "Jian Zou",
+        "self": false
+      },
+      {
+        "name": "Qiufu Lan",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      }
+    ],
+    "venue": "Proceedings of the 2023 13th International Conference on Communication and Network Security",
+    "date": "2023-12-06",
+    "year": 2023,
+    "type": "proceedings-article",
+    "issns": [],
+    "volume": "",
+    "issue": "",
+    "pages": "136-143",
+    "publisher": "ACM",
+    "url": "https://doi.org/10.1145/3638782.3638803",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "尚无适用 CCF A/B 正式会议论文证据"
+    }
+  },
+  {
+    "doi": "10.1145/3638782.3638805",
+    "title": "The differential meet-in-the-middle attack on FUTURE and CRAFT",
+    "authors": [
+      {
+        "name": "Han Lin",
+        "self": false
+      },
+      {
+        "name": "Jian Zou",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      }
+    ],
+    "venue": "Proceedings of the 2023 13th International Conference on Communication and Network Security",
+    "date": "2023-12-06",
+    "year": 2023,
+    "type": "proceedings-article",
+    "issns": [],
+    "volume": "",
+    "issue": "",
+    "pages": "151-158",
+    "publisher": "ACM",
+    "url": "https://doi.org/10.1145/3638782.3638805",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "尚无适用 CCF A/B 正式会议论文证据"
+    }
+  },
+  {
+    "doi": "10.1145/3638782.3638823",
+    "title": "Nonstationary Network Traffic Prediction With RevIN-based LSTM",
+    "authors": [
+      {
+        "name": "Zeyi Liu",
+        "self": false
+      },
+      {
+        "name": "Xiaodong Guo",
+        "self": false
+      },
+      {
+        "name": "Yinan Yao",
+        "self": false
+      },
+      {
+        "name": "Yuzhong Chen",
+        "self": false
+      },
+      {
+        "name": "Xin Yang",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      }
+    ],
+    "venue": "Proceedings of the 2023 13th International Conference on Communication and Network Security",
+    "date": "2023-12-06",
+    "year": 2023,
+    "type": "proceedings-article",
+    "issns": [],
+    "volume": "",
+    "issue": "",
+    "pages": "265-269",
+    "publisher": "ACM",
+    "url": "https://doi.org/10.1145/3638782.3638823",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "尚无适用 CCF A/B 正式会议论文证据"
+    }
+  },
+  {
+    "doi": "10.1145/3638782.3638835",
+    "title": "PracticalHAR: A Practical Method of Human Activity Recognition Based on Embedded Sensors of Mobile Phone",
+    "authors": [
+      {
+        "name": "Ruishen Bao",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      },
+      {
+        "name": "Yuzhong Chen",
+        "self": false
+      },
+      {
+        "name": "Kaihui Yang",
+        "self": false
+      },
+      {
+        "name": "Ziyang Chen",
+        "self": false
+      },
+      {
+        "name": "Yuanyuan Zhang",
+        "self": false
+      }
+    ],
+    "venue": "Proceedings of the 2023 13th International Conference on Communication and Network Security",
+    "date": "2023-12-06",
+    "year": 2023,
+    "type": "proceedings-article",
+    "issns": [],
+    "volume": "",
+    "issue": "",
+    "pages": "342-349",
+    "publisher": "ACM",
+    "url": "https://doi.org/10.1145/3638782.3638835",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "尚无适用 CCF A/B 正式会议论文证据"
+    }
+  },
+  {
+    "doi": "10.1109/tnse.2022.3227119",
+    "title": "Privacy-Preserving Object Detection With Poisoning Recognition for Autonomous Vehicles",
+    "authors": [
+      {
+        "name": "Jiayin Li",
+        "self": true
+      },
+      {
+        "name": "Wenzhong Guo",
+        "self": false
+      },
+      {
+        "name": "Lehui Xie",
+        "self": false
+      },
+      {
+        "name": "Ximeng Liu",
+        "self": false
+      },
+      {
+        "name": "Jianping Cai",
+        "self": false
+      }
+    ],
+    "venue": "IEEE Transactions on Network Science and Engineering",
+    "date": "2023-05-01",
+    "year": 2023,
+    "type": "journal-article",
+    "issns": [
+      "2327-4697",
+      "2334-329X"
+    ],
+    "volume": "10",
+    "issue": "3",
+    "pages": "1487-1500",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "url": "https://doi.org/10.1109/tnse.2022.3227119",
+    "qualification": {
+      "eligible": true,
+      "status": "eligible",
+      "evidence": [
+        {
+          "system": "LetPub-CAS",
+          "grade": 2,
+          "edition": "2023年12月旧的升级版",
+          "publicationYear": 2023,
+          "label": "LetPub 中科院大类 2区 · 2023年12月旧的升级版",
+          "source": "https://www.letpub.com.cn/index.php?journalid=10891&page=journalapp&view=detail",
+          "category": "计算机科学"
+        }
+      ]
+    }
+  },
+  {
+    "doi": "10.1109/tetc.2022.3215986",
+    "title": "Efficient Vertical Federated Learning Method for Ridge Regression of Large-Scale Samples",
+    "authors": [
+      {
+        "name": "Jianping Cai",
+        "self": false
+      },
+      {
+        "name": "Ximeng Liu",
+        "self": false
+      },
+      {
+        "name": "Zhiyong Yu",
+        "self": false
+      },
+      {
+        "name": "Kun Guo",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      }
+    ],
+    "venue": "IEEE Transactions on Emerging Topics in Computing",
+    "date": "2023-04-01",
+    "year": 2023,
+    "type": "journal-article",
+    "issns": [
+      "2168-6750",
+      "2376-4562"
+    ],
+    "volume": "11",
+    "issue": "2",
+    "pages": "511-526",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "url": "https://doi.org/10.1109/tetc.2022.3215986",
+    "qualification": {
+      "eligible": true,
+      "status": "eligible",
+      "evidence": [
+        {
+          "system": "LetPub-CAS",
+          "grade": 2,
+          "edition": "2023年12月旧的升级版",
+          "publicationYear": 2023,
+          "label": "LetPub 中科院大类 2区 · 2023年12月旧的升级版",
+          "source": "https://www.letpub.com.cn/index.php?journalid=10210&page=journalapp&view=detail",
+          "category": "计算机科学"
+        }
+      ]
+    }
+  },
+  {
+    "doi": "10.1007/978-3-031-28996-5_11",
+    "title": "Privacy-Preserving Federated Cross-Domain Social Recommendation",
+    "authors": [
+      {
+        "name": "Jianping Cai",
+        "self": false
+      },
+      {
+        "name": "Yang Liu",
+        "self": false
+      },
+      {
+        "name": "Ximeng Liu",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      },
+      {
+        "name": "Hongbin Zhuang",
+        "self": false
+      }
+    ],
+    "venue": "Trustworthy Federated Learning",
+    "date": "2023",
+    "year": 2023,
+    "type": "book-chapter",
+    "issns": [
+      "0302-9743",
+      "1611-3349"
+    ],
+    "volume": "",
+    "issue": "",
+    "pages": "144-158",
+    "publisher": "Springer International Publishing",
+    "url": "https://doi.org/10.1007/978-3-031-28996-5_11",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "尚无适用 CCF A/B 正式会议论文证据"
+    }
+  },
+  {
+    "doi": "10.1109/tvt.2020.3042794",
+    "title": "Privacy-Preserving Compressive Sensing for Real-Time Traffic Monitoring in Urban City",
+    "authors": [
+      {
+        "name": "Wenzhong Guo",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      },
+      {
+        "name": "Ximeng Liu",
+        "self": false
+      },
+      {
+        "name": "Yang Yang",
+        "self": false
+      }
+    ],
+    "venue": "IEEE Transactions on Vehicular Technology",
+    "date": "2020-12",
+    "year": 2020,
+    "type": "journal-article",
+    "issns": [
+      "0018-9545",
+      "1939-9359"
+    ],
+    "volume": "69",
+    "issue": "12",
+    "pages": "14510-14522",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "url": "https://doi.org/10.1109/tvt.2020.3042794",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "尚无发表当年 LetPub 中科院大类 1/2 区或适用 CCF A/B 证据"
+    }
+  },
+  {
+    "doi": "10.1109/access.2020.3040748",
+    "title": "Hierarchical Reinforcement-Learning for Real-Time Scheduling of Agile Satellites",
+    "authors": [
+      {
+        "name": "Lili Ren",
+        "self": false
+      },
+      {
+        "name": "Xin Ning",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      }
+    ],
+    "venue": "IEEE Access",
+    "date": "2020",
+    "year": 2020,
+    "type": "journal-article",
+    "issns": [
+      "2169-3536"
+    ],
+    "volume": "8",
+    "issue": "",
+    "pages": "220523-220532",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "url": "https://doi.org/10.1109/access.2020.3040748",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "尚无发表当年 LetPub 中科院大类 1/2 区或适用 CCF A/B 证据"
+    }
+  },
+  {
+    "doi": "10.1109/globecom38437.2019.9013109",
+    "title": "Privacy-Preserving Compressive Sensing for Traffic Estimation",
+    "authors": [
+      {
+        "name": "Jiayin Li",
+        "self": true
+      },
+      {
+        "name": "Wenzhong Guo",
+        "self": false
+      },
+      {
+        "name": "Zhuo Ma",
+        "self": false
+      },
+      {
+        "name": "Xianjia Meng",
+        "self": false
+      },
+      {
+        "name": "Yang Yang",
+        "self": false
+      },
+      {
+        "name": "Ximeng Liu",
+        "self": false
+      }
+    ],
+    "venue": "2019 IEEE Global Communications Conference (GLOBECOM)",
+    "date": "2019-12",
+    "year": 2019,
+    "type": "proceedings-article",
+    "issns": [],
+    "volume": "",
+    "issue": "",
+    "pages": "1-6",
+    "publisher": "IEEE",
+    "url": "https://doi.org/10.1109/globecom38437.2019.9013109",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "尚无适用 CCF A/B 正式会议论文证据"
+    }
+  },
+  {
+    "doi": "10.3390/s17112575",
+    "title": "Spatial-Temporal Data Collection with Compressive Sensing in Mobile Sensor Networks",
+    "authors": [
+      {
+        "name": "Haifeng Zheng",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      },
+      {
+        "name": "Xinxin Feng",
+        "self": false
+      },
+      {
+        "name": "Wenzhong Guo",
+        "self": false
+      },
+      {
+        "name": "Zhonghui Chen",
+        "self": false
+      },
+      {
+        "name": "Neal Xiong",
+        "self": false
+      }
+    ],
+    "venue": "Sensors",
+    "date": "2017-11-08",
+    "year": 2017,
+    "type": "journal-article",
+    "issns": [
+      "1424-8220"
+    ],
+    "volume": "17",
+    "issue": "11",
+    "pages": "2575",
+    "publisher": "MDPI AG",
+    "url": "https://doi.org/10.3390/s17112575",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "尚无发表当年 LetPub 中科院大类 1/2 区或适用 CCF A/B 证据"
+    }
+  },
+  {
+    "doi": "10.1109/wcsp.2017.8171137",
+    "title": "Traffic estimation in road networks via compressive sensing",
+    "authors": [
+      {
+        "name": "Jiayin Li",
+        "self": true
+      },
+      {
+        "name": "Haifeng Zheng",
+        "self": false
+      },
+      {
+        "name": "Xinxin Feng",
+        "self": false
+      },
+      {
+        "name": "Zhonghui Chen",
+        "self": false
+      }
+    ],
+    "venue": "2017 9th International Conference on Wireless Communications and Signal Processing (WCSP)",
+    "date": "2017-10",
+    "year": 2017,
+    "type": "proceedings-article",
+    "issns": [],
+    "volume": "",
+    "issue": "",
+    "pages": "1-6",
+    "publisher": "IEEE",
+    "url": "https://doi.org/10.1109/wcsp.2017.8171137",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "尚无适用 CCF A/B 正式会议论文证据"
+    }
+  }
+]

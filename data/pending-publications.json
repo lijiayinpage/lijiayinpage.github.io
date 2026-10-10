@@ -1,0 +1,429 @@
+[
+  {
+    "doi": "10.1145/3770855.3817740",
+    "title": "Silencing the Poison: An Unsupervised Granular Ball Defense Approach in Local Smoothing Context for Recommender Systems",
+    "authors": [
+      {
+        "name": "Yunmeng Zhao",
+        "self": false
+      },
+      {
+        "name": "Jun Shen",
+        "self": false
+      },
+      {
+        "name": "Shenbao Yu",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      },
+      {
+        "name": "Jiayin Lin",
+        "self": false
+      }
+    ],
+    "venue": "Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2",
+    "date": "2026-08-09",
+    "year": 2026,
+    "type": "proceedings-article",
+    "issns": [],
+    "volume": "",
+    "issue": "",
+    "pages": "6760-6771",
+    "publisher": "ACM",
+    "url": "https://doi.org/10.1145/3770855.3817740",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "会议等级符合，但尚缺 Full/Regular paper 类型证据"
+    }
+  },
+  {
+    "doi": "10.1145/3638782.3638789",
+    "title": "A Module Placement Method for Digital Microfluidic Biochips Based on Security Design",
+    "authors": [
+      {
+        "name": "Zhongliao Yang",
+        "self": false
+      },
+      {
+        "name": "Yinan Yao",
+        "self": false
+      },
+      {
+        "name": "Xiaodong Guo",
+        "self": false
+      },
+      {
+        "name": "Peixin Huang",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      },
+      {
+        "name": "Yuzhong Chen",
+        "self": false
+      },
+      {
+        "name": "Xintian Liang",
+        "self": false
+      }
+    ],
+    "venue": "Proceedings of the 2023 13th International Conference on Communication and Network Security",
+    "date": "2023-12-06",
+    "year": 2023,
+    "type": "proceedings-article",
+    "issns": [],
+    "volume": "",
+    "issue": "",
+    "pages": "40-45",
+    "publisher": "ACM",
+    "url": "https://doi.org/10.1145/3638782.3638789",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "尚无适用 CCF A/B 正式会议论文证据"
+    }
+  },
+  {
+    "doi": "10.1145/3638782.3638798",
+    "title": "Blockchain-based Searchable Encryption Scheme for Spatial Text Data",
+    "authors": [
+      {
+        "name": "Zhirun Lin",
+        "self": false
+      },
+      {
+        "name": "Yang Yang",
+        "self": false
+      },
+      {
+        "name": "Yonghua Zhan",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      },
+      {
+        "name": "Chen Dong",
+        "self": false
+      }
+    ],
+    "venue": "Proceedings of the 2023 13th International Conference on Communication and Network Security",
+    "date": "2023-12-06",
+    "year": 2023,
+    "type": "proceedings-article",
+    "issns": [],
+    "volume": "",
+    "issue": "",
+    "pages": "100-105",
+    "publisher": "ACM",
+    "url": "https://doi.org/10.1145/3638782.3638798",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "尚无适用 CCF A/B 正式会议论文证据"
+    }
+  },
+  {
+    "doi": "10.1145/3638782.3638803",
+    "title": "Improved Meet-in-the-Middle Cryptanalysis on Kupyna",
+    "authors": [
+      {
+        "name": "Jinxing Xu",
+        "self": false
+      },
+      {
+        "name": "Jian Zou",
+        "self": false
+      },
+      {
+        "name": "Qiufu Lan",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      }
+    ],
+    "venue": "Proceedings of the 2023 13th International Conference on Communication and Network Security",
+    "date": "2023-12-06",
+    "year": 2023,
+    "type": "proceedings-article",
+    "issns": [],
+    "volume": "",
+    "issue": "",
+    "pages": "136-143",
+    "publisher": "ACM",
+    "url": "https://doi.org/10.1145/3638782.3638803",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "尚无适用 CCF A/B 正式会议论文证据"
+    }
+  },
+  {
+    "doi": "10.1145/3638782.3638805",
+    "title": "The differential meet-in-the-middle attack on FUTURE and CRAFT",
+    "authors": [
+      {
+        "name": "Han Lin",
+        "self": false
+      },
+      {
+        "name": "Jian Zou",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      }
+    ],
+    "venue": "Proceedings of the 2023 13th International Conference on Communication and Network Security",
+    "date": "2023-12-06",
+    "year": 2023,
+    "type": "proceedings-article",
+    "issns": [],
+    "volume": "",
+    "issue": "",
+    "pages": "151-158",
+    "publisher": "ACM",
+    "url": "https://doi.org/10.1145/3638782.3638805",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "尚无适用 CCF A/B 正式会议论文证据"
+    }
+  },
+  {
+    "doi": "10.1145/3638782.3638823",
+    "title": "Nonstationary Network Traffic Prediction With RevIN-based LSTM",
+    "authors": [
+      {
+        "name": "Zeyi Liu",
+        "self": false
+      },
+      {
+        "name": "Xiaodong Guo",
+        "self": false
+      },
+      {
+        "name": "Yinan Yao",
+        "self": false
+      },
+      {
+        "name": "Yuzhong Chen",
+        "self": false
+      },
+      {
+        "name": "Xin Yang",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      }
+    ],
+    "venue": "Proceedings of the 2023 13th International Conference on Communication and Network Security",
+    "date": "2023-12-06",
+    "year": 2023,
+    "type": "proceedings-article",
+    "issns": [],
+    "volume": "",
+    "issue": "",
+    "pages": "265-269",
+    "publisher": "ACM",
+    "url": "https://doi.org/10.1145/3638782.3638823",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "尚无适用 CCF A/B 正式会议论文证据"
+    }
+  },
+  {
+    "doi": "10.1145/3638782.3638835",
+    "title": "PracticalHAR: A Practical Method of Human Activity Recognition Based on Embedded Sensors of Mobile Phone",
+    "authors": [
+      {
+        "name": "Ruishen Bao",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      },
+      {
+        "name": "Yuzhong Chen",
+        "self": false
+      },
+      {
+        "name": "Kaihui Yang",
+        "self": false
+      },
+      {
+        "name": "Ziyang Chen",
+        "self": false
+      },
+      {
+        "name": "Yuanyuan Zhang",
+        "self": false
+      }
+    ],
+    "venue": "Proceedings of the 2023 13th International Conference on Communication and Network Security",
+    "date": "2023-12-06",
+    "year": 2023,
+    "type": "proceedings-article",
+    "issns": [],
+    "volume": "",
+    "issue": "",
+    "pages": "342-349",
+    "publisher": "ACM",
+    "url": "https://doi.org/10.1145/3638782.3638835",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "尚无适用 CCF A/B 正式会议论文证据"
+    }
+  },
+  {
+    "doi": "10.1007/978-3-031-28996-5_11",
+    "title": "Privacy-Preserving Federated Cross-Domain Social Recommendation",
+    "authors": [
+      {
+        "name": "Jianping Cai",
+        "self": false
+      },
+      {
+        "name": "Yang Liu",
+        "self": false
+      },
+      {
+        "name": "Ximeng Liu",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      },
+      {
+        "name": "Hongbin Zhuang",
+        "self": false
+      }
+    ],
+    "venue": "Trustworthy Federated Learning",
+    "date": "2023",
+    "year": 2023,
+    "type": "book-chapter",
+    "issns": [
+      "0302-9743",
+      "1611-3349"
+    ],
+    "volume": "",
+    "issue": "",
+    "pages": "144-158",
+    "publisher": "Springer International Publishing",
+    "url": "https://doi.org/10.1007/978-3-031-28996-5_11",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "尚无适用 CCF A/B 正式会议论文证据"
+    }
+  },
+  {
+    "doi": "10.1109/access.2020.3040748",
+    "title": "Hierarchical Reinforcement-Learning for Real-Time Scheduling of Agile Satellites",
+    "authors": [
+      {
+        "name": "Lili Ren",
+        "self": false
+      },
+      {
+        "name": "Xin Ning",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      }
+    ],
+    "venue": "IEEE Access",
+    "date": "2020",
+    "year": 2020,
+    "type": "journal-article",
+    "issns": [
+      "2169-3536"
+    ],
+    "volume": "8",
+    "issue": "",
+    "pages": "220523-220532",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "url": "https://doi.org/10.1109/access.2020.3040748",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "尚无发表当年 LetPub 中科院大类 1/2 区或适用 CCF A/B 证据"
+    }
+  },
+  {
+    "doi": "10.3390/s17112575",
+    "title": "Spatial-Temporal Data Collection with Compressive Sensing in Mobile Sensor Networks",
+    "authors": [
+      {
+        "name": "Haifeng Zheng",
+        "self": false
+      },
+      {
+        "name": "Jiayin Li",
+        "self": true
+      },
+      {
+        "name": "Xinxin Feng",
+        "self": false
+      },
+      {
+        "name": "Wenzhong Guo",
+        "self": false
+      },
+      {
+        "name": "Zhonghui Chen",
+        "self": false
+      },
+      {
+        "name": "Neal Xiong",
+        "self": false
+      }
+    ],
+    "venue": "Sensors",
+    "date": "2017-11-08",
+    "year": 2017,
+    "type": "journal-article",
+    "issns": [
+      "1424-8220"
+    ],
+    "volume": "17",
+    "issue": "11",
+    "pages": "2575",
+    "publisher": "MDPI AG",
+    "url": "https://doi.org/10.3390/s17112575",
+    "qualification": {
+      "eligible": false,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "尚无发表当年 LetPub 中科院大类 1/2 区或适用 CCF A/B 证据"
+    }
+  }
+]

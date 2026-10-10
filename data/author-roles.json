@@ -1,0 +1,40 @@
+[
+  {
+    "title": "Pseudo Knowledge Driven and Lightweight Reverse Distillation for Multimodal Anomaly Detection",
+    "corresponding": true,
+    "verified": true,
+    "source": "user-provided-homepage",
+    "evidence": "原主页本人姓名带通讯标记，且该论文明确标注 Corresponding Author",
+    "doi": "10.1016/j.knosys.2025.114930"
+  },
+  {
+    "title": "FusionMIA: Enhancing Membership Inference Attacks with Spy Clients and Shadow Models in Federated Learning",
+    "corresponding": true,
+    "verified": true,
+    "source": "user-provided-homepage",
+    "evidence": "原主页本人姓名带通讯标记，且该论文明确标注 Corresponding Author",
+    "doi": "10.1007/978-981-95-3055-7_22"
+  },
+  {
+    "title": "High-Dimensional Time Series Anomaly Detection Method Based on Multimodal Hypergraph Generative Adversarial Networks",
+    "corresponding": true,
+    "verified": true,
+    "source": "user-provided-homepage",
+    "evidence": "原主页本人姓名带通讯标记，且该论文明确标注 Corresponding Author"
+  },
+  {
+    "title": "基于节点交互度的社会网络链路预测",
+    "corresponding": true,
+    "verified": true,
+    "source": "user-provided-homepage",
+    "evidence": "原主页本人姓名带通讯标记，且该论文明确标注 Corresponding Author"
+  },
+  {
+    "title": "Privacy-Preserving Compressive Sensing for Real-Time Traffic Monitoring in Urban City",
+    "corresponding": true,
+    "verified": true,
+    "source": "user-provided-homepage",
+    "evidence": "原主页本人姓名带通讯标记，且该论文明确标注 Corresponding Author",
+    "doi": "10.1109/tvt.2020.3042794"
+  }
+]
