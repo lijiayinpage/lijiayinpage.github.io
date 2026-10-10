@@ -1,0 +1,11 @@
+{
+  "orcid": "0000-0003-4798-082X",
+  "authorNames": ["Jiayin Li", "李家印"],
+  "displayName": "Jiayin Li (李家印)",
+  "contactEmail": "lijiayin2019@gmail.com",
+  "rankingYearPolicy": "publication-year",
+  "journalDatePolicy": "print-then-online",
+  "journalRankingSystem": "LetPub-CAS",
+  "journalCategoryPolicy": "major-category",
+  "excludeDois": []
+}
