@@ -1,0 +1,62 @@
+name: Update qualified publications and deploy homepage
+on:
+  schedule:
+    - cron: '20 2 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - 'index.html'
+      - 'pic/**'
+      - 'CNAME'
+      - 'publications.config.json'
+      - 'data/**'
+      - 'scripts/**'
+      - '.github/workflows/update-publications.yml'
+concurrency:
+  group: qualified-homepage
+  cancel-in-progress: false
+jobs:
+  update-and-deploy:
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - name: Test qualification rules
+        run: node --test scripts/*.test.mjs
+      - name: Discover and filter publications
+        run: node scripts/sync-publications.mjs
+      - name: Save qualifying papers and audit results
+        run: |
+          git add index.html data/publications.json data/pending-publications.json data/letpub-rankings.json
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Update publications with historical ranking checks"
+            git push origin "HEAD:${{ github.event.repository.default_branch }}"
+          fi
+      - uses: actions/configure-pages@v5
+      - name: Prepare static files
+        run: |
+          mkdir -p _site
+          cp index.html _site/index.html
+          if [ -d pic ]; then cp -R pic _site/pic; fi
+          if [ -f CNAME ]; then cp CNAME _site/CNAME; fi
+          touch _site/.nojekyll
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - uses: actions/deploy-pages@v4
+        id: deployment
